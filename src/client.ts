@@ -38,6 +38,7 @@ import {
   ImageOperationExtractTextParams,
   ImageOperationWarpParams,
   ImageOperations,
+  JsonSchemaSpec,
   WarpRequest,
   WarpResponse,
 } from './resources/image-operations';
@@ -770,6 +771,7 @@ export declare namespace ScanDocuments {
     type ExtractTextRequest as ExtractTextRequest,
     type ExtractTextResponse as ExtractTextResponse,
     type ImageFromTaskResponse as ImageFromTaskResponse,
+    type JsonSchemaSpec as JsonSchemaSpec,
     type WarpRequest as WarpRequest,
     type WarpResponse as WarpResponse,
     type ImageOperationApplyEffectParams as ImageOperationApplyEffectParams,

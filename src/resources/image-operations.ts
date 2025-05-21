@@ -819,53 +819,15 @@ export namespace ExtractTextRequest {
 
       format?: string;
 
-      items?: Schema.Items;
+      items?: ImageOperationsAPI.JsonSchemaSpec;
 
-      properties?: Record<string, Schema.Properties>;
+      properties?: Record<string, ImageOperationsAPI.JsonSchemaSpec>;
 
       required?: Array<string>;
 
       type?: 'string' | 'number' | 'integer' | 'boolean' | 'array' | 'object';
 
       [k: string]: unknown;
-    }
-
-    export namespace Schema {
-      export interface Items {
-        description?: string;
-
-        example?: unknown;
-
-        format?: string;
-
-        items?: unknown;
-
-        properties?: Record<string, unknown>;
-
-        required?: Array<string>;
-
-        type?: 'string' | 'number' | 'integer' | 'boolean' | 'array' | 'object';
-
-        [k: string]: unknown;
-      }
-
-      export interface Properties {
-        description?: string;
-
-        example?: unknown;
-
-        format?: string;
-
-        items?: unknown;
-
-        properties?: Record<string, unknown>;
-
-        required?: Array<string>;
-
-        type?: 'string' | 'number' | 'integer' | 'boolean' | 'array' | 'object';
-
-        [k: string]: unknown;
-      }
     }
   }
 }
@@ -1082,6 +1044,24 @@ export namespace ImageFromTaskResponse {
      */
     width: number;
   }
+}
+
+export interface JsonSchemaSpec {
+  description?: string;
+
+  example?: unknown;
+
+  format?: string;
+
+  items?: JsonSchemaSpec;
+
+  properties?: Record<string, JsonSchemaSpec>;
+
+  required?: Array<string>;
+
+  type?: 'string' | 'number' | 'integer' | 'boolean' | 'array' | 'object';
+
+  [k: string]: unknown;
 }
 
 /**
@@ -1430,53 +1410,15 @@ export declare namespace ImageOperationExtractTextParams {
 
       format?: string;
 
-      items?: Schema.Items;
+      items?: ImageOperationsAPI.JsonSchemaSpec;
 
-      properties?: Record<string, Schema.Properties>;
+      properties?: Record<string, ImageOperationsAPI.JsonSchemaSpec>;
 
       required?: Array<string>;
 
       type?: 'string' | 'number' | 'integer' | 'boolean' | 'array' | 'object';
 
       [k: string]: unknown;
-    }
-
-    export namespace Schema {
-      export interface Items {
-        description?: string;
-
-        example?: unknown;
-
-        format?: string;
-
-        items?: unknown;
-
-        properties?: Record<string, unknown>;
-
-        required?: Array<string>;
-
-        type?: 'string' | 'number' | 'integer' | 'boolean' | 'array' | 'object';
-
-        [k: string]: unknown;
-      }
-
-      export interface Properties {
-        description?: string;
-
-        example?: unknown;
-
-        format?: string;
-
-        items?: unknown;
-
-        properties?: Record<string, unknown>;
-
-        required?: Array<string>;
-
-        type?: 'string' | 'number' | 'integer' | 'boolean' | 'array' | 'object';
-
-        [k: string]: unknown;
-      }
     }
   }
 }
@@ -1509,6 +1451,7 @@ export declare namespace ImageOperations {
     type ExtractTextRequest as ExtractTextRequest,
     type ExtractTextResponse as ExtractTextResponse,
     type ImageFromTaskResponse as ImageFromTaskResponse,
+    type JsonSchemaSpec as JsonSchemaSpec,
     type WarpRequest as WarpRequest,
     type WarpResponse as WarpResponse,
     type ImageOperationApplyEffectParams as ImageOperationApplyEffectParams,
