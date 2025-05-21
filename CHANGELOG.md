@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.3 (2025-05-21)
+
+Full Changelog: [v0.1.0-alpha.2...v0.1.0-alpha.3](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.2...v0.1.0-alpha.3)
+
+### Features
+
+* **api:** update via SDK Studio ([6424460](https://github.com/Scan-Documents/node-sdk/commit/64244607cf2bba7625484f24707e01cf44e2c1b3))
+
 ## 0.1.0-alpha.2 (2025-05-21)
 
 Full Changelog: [v0.1.0-alpha.1...v0.1.0-alpha.2](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.1...v0.1.0-alpha.2)
