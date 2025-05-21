@@ -821,7 +821,7 @@ export namespace ExtractTextRequest {
 
       items?: ImageOperationsAPI.JsonSchemaSpec;
 
-      properties?: Record<string, ImageOperationsAPI.JsonSchemaSpec>;
+      properties?: unknown;
 
       required?: Array<string>;
 
@@ -1412,7 +1412,7 @@ export declare namespace ImageOperationExtractTextParams {
 
       items?: ImageOperationsAPI.JsonSchemaSpec;
 
-      properties?: Record<string, ImageOperationsAPI.JsonSchemaSpec>;
+      properties?: unknown;
 
       required?: Array<string>;
 
