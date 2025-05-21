@@ -65,7 +65,7 @@ export class Files extends APIResource {
   download(id: string, options?: RequestOptions): APIPromise<Response> {
     return this._client.get(path`/v1/files/${id}/download`, {
       ...options,
-      headers: buildHeaders([{ Accept: 'image/*' }, options?.headers]),
+      headers: buildHeaders([{ Accept: 'image/png' }, options?.headers]),
       __binaryResponse: true,
     });
   }
