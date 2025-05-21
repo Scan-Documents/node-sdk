@@ -2,7 +2,7 @@
   "name": "scan-documents-mcp",
   "version": "0.1.0-alpha.2",
   "description": "The official MCP Server for the Scan Documents API",
-  "author": "Scan Documents <>",
+  "author": "Scan Documents <support@scan-documents.com>",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
   "type": "commonjs",
