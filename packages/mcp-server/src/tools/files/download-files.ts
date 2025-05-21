@@ -1,0 +1,31 @@
+// File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
+
+import { Tool } from '@modelcontextprotocol/sdk/types.js';
+import type { Metadata } from '../';
+import ScanDocuments from 'scan-documents';
+
+export const metadata: Metadata = {
+  resource: 'files',
+  operation: 'read',
+  tags: [],
+};
+
+export const tool: Tool = {
+  name: 'download_files',
+  description: 'Downloads the content of a specific file by its ID.',
+  inputSchema: {
+    type: 'object',
+    properties: {
+      id: {
+        type: 'string',
+      },
+    },
+  },
+};
+
+export const handler = (client: ScanDocuments, args: Record<string, unknown> | undefined) => {
+  const { id, ...body } = args as any;
+  return client.files.download(id);
+};
+
+export default { metadata, tool, handler };

@@ -1,4 +1,4 @@
 configured_endpoints: 17
 openapi_spec_url: https://storage.googleapis.com/stainless-sdk-openapi-specs/scan-documents%2Fscan-documents-04f736d0a9ae5151fec360201288ee49dc02cc4f60adf1ff17c5e3a0bbb639b4.yml
 openapi_spec_hash: e9d1be2b0eae296e605a9a79af48ab63
-config_hash: 277743e0fb95d030cf82282dc09bf31a
+config_hash: 242faa43d2cdcb84a3ac26da983e34c6
