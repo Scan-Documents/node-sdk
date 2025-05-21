@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.2 (2025-05-21)
+
+Full Changelog: [v0.1.0-alpha.1...v0.1.0-alpha.2](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.1...v0.1.0-alpha.2)
+
+### Chores
+
+* configure new SDK language ([c67054f](https://github.com/Scan-Documents/node-sdk/commit/c67054fbb0ddd462c28710624f704049361cabb4))
+
 ## 0.1.0-alpha.1 (2025-05-21)
 
 Full Changelog: [v0.0.1-alpha.0...v0.1.0-alpha.1](https://github.com/Scan-Documents/node-sdk/compare/v0.0.1-alpha.0...v0.1.0-alpha.1)
