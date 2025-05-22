@@ -791,4 +791,6 @@ export declare namespace ScanDocuments {
     type PdfOperationRenderParams as PdfOperationRenderParams,
     type PdfOperationSplitParams as PdfOperationSplitParams,
   };
+
+  export type JsonSchemaSpec = API.JsonSchemaSpec;
 }
