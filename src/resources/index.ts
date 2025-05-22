@@ -13,7 +13,6 @@ export {
   type ExtractTextRequest,
   type ExtractTextResponse,
   type ImageFromTaskResponse,
-  type JsonSchemaSpec,
   type WarpRequest,
   type WarpResponse,
   type ImageOperationApplyEffectParams,

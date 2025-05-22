@@ -85,7 +85,7 @@ export const tool: Tool = {
                 type: 'string',
               },
               items: {
-                $ref: '#/$defs/json_schema_spec',
+                type: 'object',
               },
               properties: {
                 type: 'object',
@@ -106,39 +106,6 @@ export const tool: Tool = {
         },
       },
     ],
-    $defs: {
-      json_schema_spec: {
-        type: 'object',
-        properties: {
-          description: {
-            type: 'string',
-          },
-          example: {
-            type: 'object',
-          },
-          format: {
-            type: 'string',
-          },
-          items: {
-            $ref: '#/$defs/json_schema_spec',
-          },
-          properties: {
-            type: 'object',
-          },
-          required: {
-            type: 'array',
-            items: {
-              type: 'string',
-            },
-          },
-          type: {
-            type: 'string',
-            enum: ['string', 'number', 'integer', 'boolean', 'array', 'object'],
-          },
-        },
-        required: [],
-      },
-    },
   },
 };
 

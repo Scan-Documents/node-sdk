@@ -819,9 +819,9 @@ export namespace ExtractTextRequest {
 
       format?: string;
 
-      items?: ImageOperationsAPI.JsonSchemaSpec;
+      items?: unknown;
 
-      properties?: Record<string, ImageOperationsAPI.JsonSchemaSpec>;
+      properties?: Record<string, unknown>;
 
       required?: Array<string>;
 
@@ -1044,24 +1044,6 @@ export namespace ImageFromTaskResponse {
      */
     width: number;
   }
-}
-
-export interface JsonSchemaSpec {
-  description?: string;
-
-  example?: unknown;
-
-  format?: string;
-
-  items?: JsonSchemaSpec;
-
-  properties?: Record<string, JsonSchemaSpec>;
-
-  required?: Array<string>;
-
-  type?: 'string' | 'number' | 'integer' | 'boolean' | 'array' | 'object';
-
-  [k: string]: unknown;
 }
 
 /**
@@ -1410,9 +1392,9 @@ export declare namespace ImageOperationExtractTextParams {
 
       format?: string;
 
-      items?: ImageOperationsAPI.JsonSchemaSpec;
+      items?: unknown;
 
-      properties?: Record<string, ImageOperationsAPI.JsonSchemaSpec>;
+      properties?: Record<string, unknown>;
 
       required?: Array<string>;
 
@@ -1451,7 +1433,6 @@ export declare namespace ImageOperations {
     type ExtractTextRequest as ExtractTextRequest,
     type ExtractTextResponse as ExtractTextResponse,
     type ImageFromTaskResponse as ImageFromTaskResponse,
-    type JsonSchemaSpec as JsonSchemaSpec,
     type WarpRequest as WarpRequest,
     type WarpResponse as WarpResponse,
     type ImageOperationApplyEffectParams as ImageOperationApplyEffectParams,
