@@ -2,6 +2,7 @@
 
 import { APIResource } from '../core/resource';
 import * as ImageOperationsAPI from './image-operations';
+import * as Shared from './shared';
 import { APIPromise } from '../core/api-promise';
 import { RequestOptions } from '../internal/request-options';
 
@@ -804,31 +805,7 @@ export namespace ExtractTextRequest {
      * An OpenAPI schema object describing the expected JSON structure. Required if
      * format is 'json'.
      */
-    schema: Json.Schema;
-  }
-
-  export namespace Json {
-    /**
-     * An OpenAPI schema object describing the expected JSON structure. Required if
-     * format is 'json'.
-     */
-    export interface Schema {
-      description?: string;
-
-      example?: unknown;
-
-      format?: string;
-
-      items?: unknown;
-
-      properties?: Record<string, unknown>;
-
-      required?: Array<string>;
-
-      type?: 'string' | 'number' | 'integer' | 'boolean' | 'array' | 'object';
-
-      [k: string]: unknown;
-    }
+    schema: Shared.JsonSchemaSpec;
   }
 }
 
@@ -1377,31 +1354,7 @@ export declare namespace ImageOperationExtractTextParams {
      * An OpenAPI schema object describing the expected JSON structure. Required if
      * format is 'json'.
      */
-    schema: Json.Schema;
-  }
-
-  export namespace Json {
-    /**
-     * An OpenAPI schema object describing the expected JSON structure. Required if
-     * format is 'json'.
-     */
-    export interface Schema {
-      description?: string;
-
-      example?: unknown;
-
-      format?: string;
-
-      items?: unknown;
-
-      properties?: Record<string, unknown>;
-
-      required?: Array<string>;
-
-      type?: 'string' | 'number' | 'integer' | 'boolean' | 'array' | 'object';
-
-      [k: string]: unknown;
-    }
+    schema: Shared.JsonSchemaSpec;
   }
 }
 

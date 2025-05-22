@@ -71,41 +71,46 @@ export const tool: Tool = {
             description: 'The id of the file to operate on.',
           },
           schema: {
-            type: 'object',
-            description:
-              "An OpenAPI schema object describing the expected JSON structure. Required if format is 'json'.",
-            properties: {
-              description: {
-                type: 'string',
-              },
-              example: {
-                type: 'object',
-              },
-              format: {
-                type: 'string',
-              },
-              items: {
-                type: 'object',
-              },
-              properties: {
-                type: 'object',
-              },
-              required: {
-                type: 'array',
-                items: {
-                  type: 'string',
-                },
-              },
-              type: {
-                type: 'string',
-                enum: ['string', 'number', 'integer', 'boolean', 'array', 'object'],
-              },
-            },
-            required: [],
+            $ref: '#/$defs/json_schema_spec',
           },
         },
       },
     ],
+    $defs: {
+      json_schema_spec: {
+        type: 'object',
+        description:
+          "An OpenAPI schema object describing the expected JSON structure. Required if format is 'json'.",
+        properties: {
+          description: {
+            type: 'string',
+          },
+          example: {
+            type: 'object',
+          },
+          format: {
+            type: 'string',
+          },
+          items: {
+            $ref: '#/$defs/json_schema_spec',
+          },
+          properties: {
+            type: 'object',
+          },
+          required: {
+            type: 'array',
+            items: {
+              type: 'string',
+            },
+          },
+          type: {
+            type: 'string',
+            enum: ['string', 'number', 'integer', 'boolean', 'array', 'object'],
+          },
+        },
+        required: [],
+      },
+    },
   },
 };
 
