@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   resource: 'image_operations',
   operation: 'write',
   tags: [],
+  httpMethod: 'post',
+  httpPath: '/v1/image-operations/convert',
+  operationId: 'convertImage',
 };
 
 export const tool: Tool = {
