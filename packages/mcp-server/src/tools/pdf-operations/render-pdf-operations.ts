@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   resource: 'pdf_operations',
   operation: 'write',
   tags: [],
+  httpMethod: 'post',
+  httpPath: '/v1/pdf-operations/render',
+  operationId: 'renderPdf',
 };
 
 export const tool: Tool = {

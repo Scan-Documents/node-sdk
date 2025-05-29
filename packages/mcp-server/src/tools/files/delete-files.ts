@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   resource: 'files',
   operation: 'write',
   tags: [],
+  httpMethod: 'delete',
+  httpPath: '/v1/files/{id}',
+  operationId: 'deleteFile',
 };
 
 export const tool: Tool = {
