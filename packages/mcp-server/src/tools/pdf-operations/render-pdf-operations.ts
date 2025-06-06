@@ -1,5 +1,7 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
+import { asTextContentResult } from 'scan-documents-mcp/tools/types';
+
 import { Tool } from '@modelcontextprotocol/sdk/types.js';
 import type { Metadata } from '../';
 import ScanDocuments from 'scan-documents';
@@ -39,9 +41,9 @@ export const tool: Tool = {
   },
 };
 
-export const handler = (client: ScanDocuments, args: Record<string, unknown> | undefined) => {
+export const handler = async (client: ScanDocuments, args: Record<string, unknown> | undefined) => {
   const body = args as any;
-  return client.pdfOperations.render(body);
+  return asTextContentResult(await client.pdfOperations.render(body));
 };
 
 export default { metadata, tool, handler };
