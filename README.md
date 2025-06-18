@@ -1,6 +1,6 @@
 # Scan Documents TypeScript API Library
 
-[![NPM version](https://img.shields.io/npm/v/scan-documents.svg)](https://npmjs.org/package/scan-documents) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/scan-documents)
+[![NPM version](<https://img.shields.io/npm/v/scan-documents.svg?label=npm%20(stable)>)](https://npmjs.org/package/scan-documents) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/scan-documents)
 
 This library provides convenient access to the Scan Documents REST API from server-side TypeScript or JavaScript.
 
