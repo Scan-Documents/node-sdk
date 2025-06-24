@@ -54,6 +54,7 @@ Types:
 - <code><a href="./src/resources/image-operations.ts">ExtractTextRequest</a></code>
 - <code><a href="./src/resources/image-operations.ts">ExtractTextResponse</a></code>
 - <code><a href="./src/resources/image-operations.ts">ImageFromTaskResponse</a></code>
+- <code><a href="./src/resources/image-operations.ts">ScanResponse</a></code>
 - <code><a href="./src/resources/image-operations.ts">WarpRequest</a></code>
 - <code><a href="./src/resources/image-operations.ts">WarpResponse</a></code>
 
@@ -63,6 +64,7 @@ Methods:
 - <code title="post /v1/image-operations/convert">client.imageOperations.<a href="./src/resources/image-operations.ts">convert</a>({ ...params }) -> ConvertResponse</code>
 - <code title="post /v1/image-operations/detect-documents">client.imageOperations.<a href="./src/resources/image-operations.ts">detectDocuments</a>({ ...params }) -> DetectDocumentsResponse</code>
 - <code title="post /v1/image-operations/extract-text">client.imageOperations.<a href="./src/resources/image-operations.ts">extractText</a>({ ...params }) -> ExtractTextResponse</code>
+- <code title="post /v1/image-operations/scan">client.imageOperations.<a href="./src/resources/image-operations.ts">scan</a>({ ...params }) -> ScanResponse</code>
 - <code title="post /v1/image-operations/warp">client.imageOperations.<a href="./src/resources/image-operations.ts">warp</a>({ ...params }) -> WarpResponse</code>
 
 # PdfOperations
