@@ -1,5 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
+export * from './shared';
 export { Events, type EventListResponse, type EventListParams } from './events';
 export { Files, type File, type FileListResponse, type FileListParams, type FileUploadParams } from './files';
 export {
@@ -13,7 +14,6 @@ export {
   type ExtractTextRequest,
   type ExtractTextResponse,
   type ImageFromTaskResponse,
-  type JsonSchemaSpec,
   type WarpRequest,
   type WarpResponse,
   type ImageOperationApplyEffectParams,

@@ -1,5 +1,7 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
+import { asTextContentResult } from 'scan-documents-mcp/tools/types';
+
 import { Tool } from '@modelcontextprotocol/sdk/types.js';
 import type { Metadata } from '../';
 import ScanDocuments from 'scan-documents';
@@ -8,6 +10,9 @@ export const metadata: Metadata = {
   resource: 'image_operations',
   operation: 'write',
   tags: [],
+  httpMethod: 'post',
+  httpPath: '/v1/image-operations/convert',
+  operationId: 'convertImage',
 };
 
 export const tool: Tool = {
@@ -21,12 +26,17 @@ export const tool: Tool = {
         properties: {
           input: {
             type: 'string',
-            description: 'The id of the file to operate on.',
+            description: 'The id of the file or task to operate on.',
           },
           target_format: {
             type: 'string',
             description: 'The format to convert the image to.',
             enum: ['image/png'],
+          },
+          callback_url: {
+            type: 'string',
+            description:
+              'The URL to call when the task is completed or failed. If you want to receive events, you probably prefer to use `webhooks` instead.',
           },
           name: {
             type: 'string',
@@ -39,7 +49,7 @@ export const tool: Tool = {
         properties: {
           input: {
             type: 'string',
-            description: 'The id of the file to operate on.',
+            description: 'The id of the file or task to operate on.',
           },
           quality: {
             type: 'number',
@@ -50,6 +60,11 @@ export const tool: Tool = {
             description: 'The format to convert the image to.',
             enum: ['image/jpeg'],
           },
+          callback_url: {
+            type: 'string',
+            description:
+              'The URL to call when the task is completed or failed. If you want to receive events, you probably prefer to use `webhooks` instead.',
+          },
           name: {
             type: 'string',
             description: 'The name of the file',
@@ -61,7 +76,7 @@ export const tool: Tool = {
         properties: {
           input: {
             type: 'string',
-            description: 'The id of the file to operate on.',
+            description: 'The id of the file or task to operate on.',
           },
           quality: {
             type: 'number',
@@ -71,6 +86,11 @@ export const tool: Tool = {
             type: 'string',
             description: 'The format to convert the image to.',
             enum: ['image/webp'],
+          },
+          callback_url: {
+            type: 'string',
+            description:
+              'The URL to call when the task is completed or failed. If you want to receive events, you probably prefer to use `webhooks` instead.',
           },
           name: {
             type: 'string',
@@ -82,9 +102,9 @@ export const tool: Tool = {
   },
 };
 
-export const handler = (client: ScanDocuments, args: Record<string, unknown> | undefined) => {
+export const handler = async (client: ScanDocuments, args: Record<string, unknown> | undefined) => {
   const body = args as any;
-  return client.imageOperations.convert(body);
+  return asTextContentResult(await client.imageOperations.convert(body));
 };
 
 export default { metadata, tool, handler };

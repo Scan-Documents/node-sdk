@@ -1,6 +1,6 @@
 # Scan Documents TypeScript API Library
 
-[![NPM version](https://img.shields.io/npm/v/scan-documents.svg)](https://npmjs.org/package/scan-documents) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/scan-documents)
+[![NPM version](<https://img.shields.io/npm/v/scan-documents.svg?label=npm%20(stable)>)](https://npmjs.org/package/scan-documents) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/scan-documents)
 
 This library provides convenient access to the Scan Documents REST API from server-side TypeScript or JavaScript.
 
@@ -26,11 +26,7 @@ const client = new ScanDocuments({
   apiKey: process.env['SCAN_DOCUMENTS_API_KEY'], // This is the default and can be omitted
 });
 
-async function main() {
-  const file = await client.files.upload({ file: fs.createReadStream('path/to/file'), name: 'REPLACE_ME' });
-}
-
-main();
+const file = await client.files.upload({ file: fs.createReadStream('path/to/file'), name: 'REPLACE_ME' });
 ```
 
 ### Request & Response types
@@ -45,15 +41,11 @@ const client = new ScanDocuments({
   apiKey: process.env['SCAN_DOCUMENTS_API_KEY'], // This is the default and can be omitted
 });
 
-async function main() {
-  const params: ScanDocuments.FileUploadParams = {
-    file: fs.createReadStream('path/to/file'),
-    name: 'REPLACE_ME',
-  };
-  const file: ScanDocuments.File = await client.files.upload(params);
-}
-
-main();
+const params: ScanDocuments.FileUploadParams = {
+  file: fs.createReadStream('path/to/file'),
+  name: 'REPLACE_ME',
+};
+const file: ScanDocuments.File = await client.files.upload(params);
 ```
 
 Documentation for each method, request param, and response field are available in docstrings and will appear on hover in most modern editors.
@@ -115,21 +107,17 @@ a subclass of `APIError` will be thrown:
 
 <!-- prettier-ignore -->
 ```ts
-async function main() {
-  const file = await client.files
-    .upload({ file: fs.createReadStream('path/to/file'), name: 'REPLACE_ME' })
-    .catch(async (err) => {
-      if (err instanceof ScanDocuments.APIError) {
-        console.log(err.status); // 400
-        console.log(err.name); // BadRequestError
-        console.log(err.headers); // {server: 'nginx', ...}
-      } else {
-        throw err;
-      }
-    });
-}
-
-main();
+const file = await client.files
+  .upload({ file: fs.createReadStream('path/to/file'), name: 'REPLACE_ME' })
+  .catch(async (err) => {
+    if (err instanceof ScanDocuments.APIError) {
+      console.log(err.status); // 400
+      console.log(err.name); // BadRequestError
+      console.log(err.headers); // {server: 'nginx', ...}
+    } else {
+      throw err;
+    }
+  });
 ```
 
 Error codes are as follows:
@@ -291,9 +279,8 @@ parameter. This library doesn't validate at runtime that the request matches the
 send will be sent as-is.
 
 ```ts
-client.foo.create({
-  foo: 'my_param',
-  bar: 12,
+client.files.upload({
+  // ...
   // @ts-expect-error baz is not yet public
   baz: 'undocumented option',
 });

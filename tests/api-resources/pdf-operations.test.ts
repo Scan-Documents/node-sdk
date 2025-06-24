@@ -28,6 +28,7 @@ describe('resource pdfOperations', () => {
     const response = await client.pdfOperations.extractPages({
       input: 'file_avyrvozb9302uwhq',
       pages: '2-7',
+      callback_url: 'https://example.com/callback',
       name: 'File Name',
     });
   });
@@ -48,6 +49,7 @@ describe('resource pdfOperations', () => {
   test.skip('merge: required and optional params', async () => {
     const response = await client.pdfOperations.merge({
       input: ['file_avyrvozb9302uwhq'],
+      callback_url: 'https://example.com/callback',
       name: 'File Name',
     });
   });
@@ -68,6 +70,7 @@ describe('resource pdfOperations', () => {
   test.skip('render: required and optional params', async () => {
     const response = await client.pdfOperations.render({
       input: 'file_avyrvozb9302uwhq',
+      callback_url: 'https://example.com/callback',
       dpi: 300,
       name: 'File Name',
       pages: '2-7',
@@ -88,6 +91,10 @@ describe('resource pdfOperations', () => {
 
   // skipped: tests are disabled for the time being
   test.skip('split: required and optional params', async () => {
-    const response = await client.pdfOperations.split({ input: 'file_avyrvozb9302uwhq', name: 'File Name' });
+    const response = await client.pdfOperations.split({
+      input: 'file_avyrvozb9302uwhq',
+      callback_url: 'https://example.com/callback',
+      name: 'File Name',
+    });
   });
 });
