@@ -315,7 +315,7 @@ export namespace ApplyEffectResponse {
     }
 
     export interface Result {
-      details: Record<string, unknown>;
+      details: { [key: string]: unknown };
 
       error: string;
     }
@@ -559,7 +559,7 @@ export namespace ConvertResponse {
 
   export namespace FailedConvertTaskResponse {
     export interface Result {
-      details: Record<string, unknown>;
+      details: { [key: string]: unknown };
 
       error: string;
     }
@@ -737,7 +737,7 @@ export namespace DetectDocumentsResponse {
 
   export namespace FailedConvertTaskResponse {
     export interface Result {
-      details: Record<string, unknown>;
+      details: { [key: string]: unknown };
 
       error: string;
     }
@@ -965,7 +965,7 @@ export namespace ExtractTextResponse {
 
   export namespace FailedExtractTextTaskResponse {
     export interface Result {
-      details: Record<string, unknown>;
+      details: { [key: string]: unknown };
 
       error: string;
     }
@@ -1197,7 +1197,7 @@ export namespace WarpResponse {
 
   export namespace FailedWarpTaskResponse {
     export interface Result {
-      details: Record<string, unknown>;
+      details: { [key: string]: unknown };
 
       error: string;
     }

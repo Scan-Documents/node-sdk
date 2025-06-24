@@ -17,7 +17,7 @@ export interface JsonSchemaSpec {
    */
   items?: JsonSchemaSpec;
 
-  properties?: Record<string, JsonSchemaSpec>;
+  properties?: { [key: string]: JsonSchemaSpec };
 
   required?: Array<string>;
 

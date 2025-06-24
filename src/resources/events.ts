@@ -584,7 +584,7 @@ export namespace EventListResponse {
         /**
          * Additional details about the error
          */
-        details: Record<string, unknown>;
+        details: { [key: string]: unknown };
 
         /**
          * The error message

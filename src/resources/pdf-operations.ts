@@ -326,7 +326,7 @@ export namespace ExtractPages {
     }
 
     export interface Result {
-      details: Record<string, unknown>;
+      details: { [key: string]: unknown };
 
       error: string;
     }
@@ -527,7 +527,7 @@ export namespace Merge {
     }
 
     export interface Result {
-      details: Record<string, unknown>;
+      details: { [key: string]: unknown };
 
       error: string;
     }
@@ -768,7 +768,7 @@ export namespace Render {
     }
 
     export interface Result {
-      details: Record<string, unknown>;
+      details: { [key: string]: unknown };
 
       error: string;
     }
@@ -969,7 +969,7 @@ export namespace Split {
     }
 
     export interface Result {
-      details: Record<string, unknown>;
+      details: { [key: string]: unknown };
 
       error: string;
     }
