@@ -272,7 +272,7 @@ export namespace TaskResponse {
     }
 
     export interface Result {
-      details: Record<string, unknown>;
+      details: { [key: string]: unknown };
 
       error: string;
     }
@@ -410,7 +410,7 @@ export namespace TaskResponse {
 
   export namespace FailedConvertTaskResponse {
     export interface Result {
-      details: Record<string, unknown>;
+      details: { [key: string]: unknown };
 
       error: string;
     }
@@ -565,7 +565,7 @@ export namespace TaskResponse {
 
   export namespace FailedConvertTaskResponse {
     export interface Result {
-      details: Record<string, unknown>;
+      details: { [key: string]: unknown };
 
       error: string;
     }
@@ -717,7 +717,7 @@ export namespace TaskResponse {
 
   export namespace FailedExtractTextTaskResponse {
     export interface Result {
-      details: Record<string, unknown>;
+      details: { [key: string]: unknown };
 
       error: string;
     }
@@ -867,7 +867,7 @@ export namespace TaskResponse {
 
   export namespace FailedWarpTaskResponse {
     export interface Result {
-      details: Record<string, unknown>;
+      details: { [key: string]: unknown };
 
       error: string;
     }
@@ -1077,7 +1077,7 @@ export namespace TaskResponse {
     }
 
     export interface Result {
-      details: Record<string, unknown>;
+      details: { [key: string]: unknown };
 
       error: string;
     }
@@ -1267,7 +1267,7 @@ export namespace TaskResponse {
     }
 
     export interface Result {
-      details: Record<string, unknown>;
+      details: { [key: string]: unknown };
 
       error: string;
     }
@@ -1497,7 +1497,7 @@ export namespace TaskResponse {
     }
 
     export interface Result {
-      details: Record<string, unknown>;
+      details: { [key: string]: unknown };
 
       error: string;
     }
@@ -1687,7 +1687,7 @@ export namespace TaskResponse {
     }
 
     export interface Result {
-      details: Record<string, unknown>;
+      details: { [key: string]: unknown };
 
       error: string;
     }
