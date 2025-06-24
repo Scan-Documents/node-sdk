@@ -65,7 +65,11 @@ export type TaskResponse =
   | TaskResponse.CompletedSplitTaskResponse
   | TaskResponse.PendingSplitTaskResponse
   | TaskResponse.ProcessingSplitTaskResponse
-  | TaskResponse.FailedSplitTaskResponse;
+  | TaskResponse.FailedSplitTaskResponse
+  | TaskResponse.CompletedScanTaskResponse
+  | TaskResponse.PendingScanTaskResponse
+  | TaskResponse.ProcessingScanTaskResponse
+  | TaskResponse.FailedScanTaskResponse;
 
 export namespace TaskResponse {
   export interface CompletedApplyEffectTaskResponse {
@@ -73,6 +77,11 @@ export namespace TaskResponse {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -107,9 +116,15 @@ export namespace TaskResponse {
       effect: 'grayscale' | 'scanner' | 'black-background';
 
       /**
-       * The id of the file to operate on.
+       * The id of the file or task to operate on.
        */
       input: string;
+
+      /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
 
       /**
        * The name of the file
@@ -127,6 +142,11 @@ export namespace TaskResponse {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -161,9 +181,15 @@ export namespace TaskResponse {
       effect: 'grayscale' | 'scanner' | 'black-background';
 
       /**
-       * The id of the file to operate on.
+       * The id of the file or task to operate on.
        */
       input: string;
+
+      /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
 
       /**
        * The name of the file
@@ -177,6 +203,11 @@ export namespace TaskResponse {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -211,9 +242,15 @@ export namespace TaskResponse {
       effect: 'grayscale' | 'scanner' | 'black-background';
 
       /**
-       * The id of the file to operate on.
+       * The id of the file or task to operate on.
        */
       input: string;
+
+      /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
 
       /**
        * The name of the file
@@ -227,6 +264,11 @@ export namespace TaskResponse {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -261,9 +303,15 @@ export namespace TaskResponse {
       effect: 'grayscale' | 'scanner' | 'black-background';
 
       /**
-       * The id of the file to operate on.
+       * The id of the file or task to operate on.
        */
       input: string;
+
+      /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
 
       /**
        * The name of the file
@@ -283,6 +331,11 @@ export namespace TaskResponse {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -322,6 +375,11 @@ export namespace TaskResponse {
     id: string;
 
     /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
+
+    /**
      * The creation date of the task in ISO format.
      */
     created_at: string;
@@ -353,6 +411,11 @@ export namespace TaskResponse {
     id: string;
 
     /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
+
+    /**
      * The creation date of the task in ISO format.
      */
     created_at: string;
@@ -382,6 +445,11 @@ export namespace TaskResponse {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -421,6 +489,11 @@ export namespace TaskResponse {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -463,6 +536,11 @@ export namespace TaskResponse {
         bounding_box: ImageOperationsAPI.BoundingBox;
 
         /**
+         * The ID of the file containing the document
+         */
+        file_id: string;
+
+        /**
          * The coordinates of the vertex inside the image
          */
         vertices: Array<ImageOperationsAPI.CoordinatesItem>;
@@ -475,6 +553,11 @@ export namespace TaskResponse {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -508,6 +591,11 @@ export namespace TaskResponse {
     id: string;
 
     /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
+
+    /**
      * The creation date of the task in ISO format.
      */
     created_at: string;
@@ -537,6 +625,11 @@ export namespace TaskResponse {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -576,6 +669,11 @@ export namespace TaskResponse {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -620,6 +718,11 @@ export namespace TaskResponse {
     id: string;
 
     /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
+
+    /**
      * The creation date of the task in ISO format.
      */
     created_at: string;
@@ -654,6 +757,11 @@ export namespace TaskResponse {
     id: string;
 
     /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
+
+    /**
      * The creation date of the task in ISO format.
      */
     created_at: string;
@@ -686,6 +794,11 @@ export namespace TaskResponse {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -730,6 +843,11 @@ export namespace TaskResponse {
     id: string;
 
     /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
+
+    /**
      * The creation date of the task in ISO format.
      */
     created_at: string;
@@ -770,6 +888,11 @@ export namespace TaskResponse {
     id: string;
 
     /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
+
+    /**
      * The creation date of the task in ISO format.
      */
     created_at: string;
@@ -804,6 +927,11 @@ export namespace TaskResponse {
     id: string;
 
     /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
+
+    /**
      * The creation date of the task in ISO format.
      */
     created_at: string;
@@ -836,6 +964,11 @@ export namespace TaskResponse {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -880,6 +1013,11 @@ export namespace TaskResponse {
     id: string;
 
     /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
+
+    /**
      * The creation date of the task in ISO format.
      */
     created_at: string;
@@ -907,7 +1045,7 @@ export namespace TaskResponse {
   export namespace CompletedExtractPagesTaskResponse {
     export interface Parameters {
       /**
-       * The id of the file to operate on.
+       * The id of the file or task to operate on.
        */
       input: string;
 
@@ -915,6 +1053,12 @@ export namespace TaskResponse {
        * Page range (e.g., 2-7), a comma-separated list (e.g., 2,3,7) of pages.
        */
       pages: string;
+
+      /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
 
       /**
        * The name of the file
@@ -932,6 +1076,11 @@ export namespace TaskResponse {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -961,7 +1110,7 @@ export namespace TaskResponse {
   export namespace PendingExtractPagesTaskResponse {
     export interface Parameters {
       /**
-       * The id of the file to operate on.
+       * The id of the file or task to operate on.
        */
       input: string;
 
@@ -969,6 +1118,12 @@ export namespace TaskResponse {
        * Page range (e.g., 2-7), a comma-separated list (e.g., 2,3,7) of pages.
        */
       pages: string;
+
+      /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
 
       /**
        * The name of the file
@@ -982,6 +1137,11 @@ export namespace TaskResponse {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -1011,7 +1171,7 @@ export namespace TaskResponse {
   export namespace ProcessingExtractPagesTaskResponse {
     export interface Parameters {
       /**
-       * The id of the file to operate on.
+       * The id of the file or task to operate on.
        */
       input: string;
 
@@ -1019,6 +1179,12 @@ export namespace TaskResponse {
        * Page range (e.g., 2-7), a comma-separated list (e.g., 2,3,7) of pages.
        */
       pages: string;
+
+      /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
 
       /**
        * The name of the file
@@ -1032,6 +1198,11 @@ export namespace TaskResponse {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -1061,7 +1232,7 @@ export namespace TaskResponse {
   export namespace FailedExtractPagesTaskResponse {
     export interface Parameters {
       /**
-       * The id of the file to operate on.
+       * The id of the file or task to operate on.
        */
       input: string;
 
@@ -1069,6 +1240,12 @@ export namespace TaskResponse {
        * Page range (e.g., 2-7), a comma-separated list (e.g., 2,3,7) of pages.
        */
       pages: string;
+
+      /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
 
       /**
        * The name of the file
@@ -1088,6 +1265,11 @@ export namespace TaskResponse {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -1122,6 +1304,12 @@ export namespace TaskResponse {
       input: Array<string>;
 
       /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
+
+      /**
        * The name of the file
        */
       name?: string;
@@ -1137,6 +1325,11 @@ export namespace TaskResponse {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -1171,6 +1364,12 @@ export namespace TaskResponse {
       input: Array<string>;
 
       /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
+
+      /**
        * The name of the file
        */
       name?: string;
@@ -1182,6 +1381,11 @@ export namespace TaskResponse {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -1216,6 +1420,12 @@ export namespace TaskResponse {
       input: Array<string>;
 
       /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
+
+      /**
        * The name of the file
        */
       name?: string;
@@ -1227,6 +1437,11 @@ export namespace TaskResponse {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -1261,6 +1476,12 @@ export namespace TaskResponse {
       input: Array<string>;
 
       /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
+
+      /**
        * The name of the file
        */
       name?: string;
@@ -1278,6 +1499,11 @@ export namespace TaskResponse {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -1312,9 +1538,15 @@ export namespace TaskResponse {
       dpi: number;
 
       /**
-       * The id of the file to operate on.
+       * The id of the file or task to operate on.
        */
       input: string;
+
+      /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
 
       /**
        * The name of the file
@@ -1337,6 +1569,11 @@ export namespace TaskResponse {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -1371,9 +1608,15 @@ export namespace TaskResponse {
       dpi: number;
 
       /**
-       * The id of the file to operate on.
+       * The id of the file or task to operate on.
        */
       input: string;
+
+      /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
 
       /**
        * The name of the file
@@ -1392,6 +1635,11 @@ export namespace TaskResponse {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -1426,9 +1674,15 @@ export namespace TaskResponse {
       dpi: number;
 
       /**
-       * The id of the file to operate on.
+       * The id of the file or task to operate on.
        */
       input: string;
+
+      /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
 
       /**
        * The name of the file
@@ -1447,6 +1701,11 @@ export namespace TaskResponse {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -1481,9 +1740,15 @@ export namespace TaskResponse {
       dpi: number;
 
       /**
-       * The id of the file to operate on.
+       * The id of the file or task to operate on.
        */
       input: string;
+
+      /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
 
       /**
        * The name of the file
@@ -1508,6 +1773,11 @@ export namespace TaskResponse {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -1537,9 +1807,15 @@ export namespace TaskResponse {
   export namespace CompletedSplitTaskResponse {
     export interface Parameters {
       /**
-       * The id of the file to operate on.
+       * The id of the file or task to operate on.
        */
       input: string;
+
+      /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
 
       /**
        * The name of the file
@@ -1557,6 +1833,11 @@ export namespace TaskResponse {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -1586,9 +1867,15 @@ export namespace TaskResponse {
   export namespace PendingSplitTaskResponse {
     export interface Parameters {
       /**
-       * The id of the file to operate on.
+       * The id of the file or task to operate on.
        */
       input: string;
+
+      /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
 
       /**
        * The name of the file
@@ -1602,6 +1889,11 @@ export namespace TaskResponse {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -1631,9 +1923,15 @@ export namespace TaskResponse {
   export namespace ProcessingSplitTaskResponse {
     export interface Parameters {
       /**
-       * The id of the file to operate on.
+       * The id of the file or task to operate on.
        */
       input: string;
+
+      /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
 
       /**
        * The name of the file
@@ -1647,6 +1945,11 @@ export namespace TaskResponse {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -1676,9 +1979,309 @@ export namespace TaskResponse {
   export namespace FailedSplitTaskResponse {
     export interface Parameters {
       /**
-       * The id of the file to operate on.
+       * The id of the file or task to operate on.
        */
       input: string;
+
+      /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
+
+      /**
+       * The name of the file
+       */
+      name?: string;
+    }
+
+    export interface Result {
+      details: { [key: string]: unknown };
+
+      error: string;
+    }
+  }
+
+  export interface CompletedScanTaskResponse {
+    /**
+     * The unique identifier for the task.
+     */
+    id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
+
+    /**
+     * The creation date of the task in ISO format.
+     */
+    created_at: string;
+
+    /**
+     * The type of operation being performed by the task.
+     */
+    operation: 'scan';
+
+    parameters: CompletedScanTaskResponse.Parameters;
+
+    result: CompletedScanTaskResponse.Result;
+
+    /**
+     * The current status of the task.
+     */
+    status: 'completed';
+
+    /**
+     * The last update date of the task in ISO format.
+     */
+    updated_at: string;
+  }
+
+  export namespace CompletedScanTaskResponse {
+    export interface Parameters {
+      /**
+       * The effect to apply to the image
+       */
+      effect: 'none' | 'grayscale' | 'scanner' | 'black-background';
+
+      /**
+       * The id of the file or task to operate on.
+       */
+      input: string;
+
+      /**
+       * Mode for detecting documents in the image. Available modes are:
+       *
+       * - **none**: No document detection is performed.
+       * - **standard**: Using a quick algorithm. Document is detected in the image, and
+       *   the image is cropped to the detected document area fixing the perspective to
+       *   match the document's shape.
+       */
+      scan_mode: 'none' | 'standard';
+
+      /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
+
+      /**
+       * The name of the file
+       */
+      name?: string;
+    }
+
+    export interface Result {
+      generated_files: Array<ImageOperationsAPI.ImageFromTaskResponse>;
+    }
+  }
+
+  export interface PendingScanTaskResponse {
+    /**
+     * The unique identifier for the task.
+     */
+    id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
+
+    /**
+     * The creation date of the task in ISO format.
+     */
+    created_at: string;
+
+    /**
+     * The type of operation being performed by the task.
+     */
+    operation: 'scan';
+
+    parameters: PendingScanTaskResponse.Parameters;
+
+    result: unknown;
+
+    /**
+     * The current status of the task.
+     */
+    status: 'pending';
+
+    /**
+     * The last update date of the task in ISO format.
+     */
+    updated_at: string;
+  }
+
+  export namespace PendingScanTaskResponse {
+    export interface Parameters {
+      /**
+       * The effect to apply to the image
+       */
+      effect: 'none' | 'grayscale' | 'scanner' | 'black-background';
+
+      /**
+       * The id of the file or task to operate on.
+       */
+      input: string;
+
+      /**
+       * Mode for detecting documents in the image. Available modes are:
+       *
+       * - **none**: No document detection is performed.
+       * - **standard**: Using a quick algorithm. Document is detected in the image, and
+       *   the image is cropped to the detected document area fixing the perspective to
+       *   match the document's shape.
+       */
+      scan_mode: 'none' | 'standard';
+
+      /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
+
+      /**
+       * The name of the file
+       */
+      name?: string;
+    }
+  }
+
+  export interface ProcessingScanTaskResponse {
+    /**
+     * The unique identifier for the task.
+     */
+    id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
+
+    /**
+     * The creation date of the task in ISO format.
+     */
+    created_at: string;
+
+    /**
+     * The type of operation being performed by the task.
+     */
+    operation: 'scan';
+
+    parameters: ProcessingScanTaskResponse.Parameters;
+
+    result: unknown;
+
+    /**
+     * The current status of the task.
+     */
+    status: 'processing';
+
+    /**
+     * The last update date of the task in ISO format.
+     */
+    updated_at: string;
+  }
+
+  export namespace ProcessingScanTaskResponse {
+    export interface Parameters {
+      /**
+       * The effect to apply to the image
+       */
+      effect: 'none' | 'grayscale' | 'scanner' | 'black-background';
+
+      /**
+       * The id of the file or task to operate on.
+       */
+      input: string;
+
+      /**
+       * Mode for detecting documents in the image. Available modes are:
+       *
+       * - **none**: No document detection is performed.
+       * - **standard**: Using a quick algorithm. Document is detected in the image, and
+       *   the image is cropped to the detected document area fixing the perspective to
+       *   match the document's shape.
+       */
+      scan_mode: 'none' | 'standard';
+
+      /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
+
+      /**
+       * The name of the file
+       */
+      name?: string;
+    }
+  }
+
+  export interface FailedScanTaskResponse {
+    /**
+     * The unique identifier for the task.
+     */
+    id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
+
+    /**
+     * The creation date of the task in ISO format.
+     */
+    created_at: string;
+
+    /**
+     * The type of operation being performed by the task.
+     */
+    operation: 'scan';
+
+    parameters: FailedScanTaskResponse.Parameters;
+
+    result: FailedScanTaskResponse.Result;
+
+    /**
+     * The current status of the task.
+     */
+    status: 'failed';
+
+    /**
+     * The last update date of the task in ISO format.
+     */
+    updated_at: string;
+  }
+
+  export namespace FailedScanTaskResponse {
+    export interface Parameters {
+      /**
+       * The effect to apply to the image
+       */
+      effect: 'none' | 'grayscale' | 'scanner' | 'black-background';
+
+      /**
+       * The id of the file or task to operate on.
+       */
+      input: string;
+
+      /**
+       * Mode for detecting documents in the image. Available modes are:
+       *
+       * - **none**: No document detection is performed.
+       * - **standard**: Using a quick algorithm. Document is detected in the image, and
+       *   the image is cropped to the detected document area fixing the perspective to
+       *   match the document's shape.
+       */
+      scan_mode: 'none' | 'standard';
+
+      /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
 
       /**
        * The name of the file

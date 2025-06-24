@@ -31,7 +31,12 @@ export const tool: Tool = {
           },
           input: {
             type: 'string',
-            description: 'The id of the file to operate on.',
+            description: 'The id of the file or task to operate on.',
+          },
+          callback_url: {
+            type: 'string',
+            description:
+              'The URL to call when the task is completed or failed. If you want to receive events, you probably prefer to use `webhooks` instead.',
           },
         },
       },
@@ -45,7 +50,12 @@ export const tool: Tool = {
           },
           input: {
             type: 'string',
-            description: 'The id of the file to operate on.',
+            description: 'The id of the file or task to operate on.',
+          },
+          callback_url: {
+            type: 'string',
+            description:
+              'The URL to call when the task is completed or failed. If you want to receive events, you probably prefer to use `webhooks` instead.',
           },
         },
       },
@@ -59,7 +69,12 @@ export const tool: Tool = {
           },
           input: {
             type: 'string',
-            description: 'The id of the file to operate on.',
+            description: 'The id of the file or task to operate on.',
+          },
+          callback_url: {
+            type: 'string',
+            description:
+              'The URL to call when the task is completed or failed. If you want to receive events, you probably prefer to use `webhooks` instead.',
           },
         },
       },
@@ -73,10 +88,15 @@ export const tool: Tool = {
           },
           input: {
             type: 'string',
-            description: 'The id of the file to operate on.',
+            description: 'The id of the file or task to operate on.',
           },
           schema: {
             $ref: '#/$defs/json_schema_spec',
+          },
+          callback_url: {
+            type: 'string',
+            description:
+              'The URL to call when the task is completed or failed. If you want to receive events, you probably prefer to use `webhooks` instead.',
           },
         },
       },
