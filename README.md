@@ -4,7 +4,7 @@
 
 This library provides convenient access to the Scan Documents REST API from server-side TypeScript or JavaScript.
 
-The REST API documentation can be found on [scan-documents.com](https://scan-documents.com/docs). The full API of this library can be found in [api.md](api.md).
+The REST API documentation can be found on [Scan Documents](https://scan-documents.com/docs). The full API of this library can be found in [api.md](api.md).
 
 It is generated with [Stainless](https://www.stainless.com/).
 
@@ -77,6 +77,25 @@ await client.files.upload({ file: await fetch('https://somesite/file'), name: 'F
 // Finally, if none of the above are convenient, you can use our `toFile` helper:
 await client.files.upload({ file: await toFile(Buffer.from('my bytes'), 'file'), name: 'File Name' });
 await client.files.upload({ file: await toFile(new Uint8Array([0, 1, 2]), 'file'), name: 'File Name' });
+```
+
+## Task operations
+
+Operations can be found under the `imageOperations` and `pdfOperations` resources.
+
+```ts
+import ScanDocuments from 'scan-documents';
+
+const client = new ScanDocuments({
+  apiKey: process.env['SCAN_DOCUMENTS_API_KEY'], // This is the default and can be omitted
+});
+
+const applyEffectResponse = await client.imageOperations.applyEffect({
+  effect: 'grayscale',
+  input: 'file_avyrvozb9302uwhq',
+});
+
+console.log(applyEffectResponse);
 ```
 
 ## Handling errors
