@@ -237,7 +237,8 @@ export namespace EventListResponse {
         | 'merge'
         | 'extract-pages'
         | 'detect-documents'
-        | 'apply-effect';
+        | 'apply-effect'
+        | 'scan';
     }
   }
 
@@ -324,6 +325,11 @@ export namespace EventListResponse {
            * The rectangle that contains the document in the image
            */
           bounding_box: ImageOperationsAPI.BoundingBox;
+
+          /**
+           * The ID of the file containing the document
+           */
+          file_id: string;
 
           /**
            * The coordinates of the vertex inside the image
@@ -523,7 +529,8 @@ export namespace EventListResponse {
         | 'merge'
         | 'extract-pages'
         | 'detect-documents'
-        | 'apply-effect';
+        | 'apply-effect'
+        | 'scan';
     }
   }
 
@@ -574,7 +581,8 @@ export namespace EventListResponse {
         | 'merge'
         | 'extract-pages'
         | 'detect-documents'
-        | 'apply-effect';
+        | 'apply-effect'
+        | 'scan';
 
       result: Data.Result;
     }
@@ -584,7 +592,7 @@ export namespace EventListResponse {
         /**
          * Additional details about the error
          */
-        details: Record<string, unknown>;
+        details: { [key: string]: unknown };
 
         /**
          * The error message

@@ -1,5 +1,7 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
+import { asTextContentResult } from 'scan-documents-mcp/tools/types';
+
 import { Tool } from '@modelcontextprotocol/sdk/types.js';
 import type { Metadata } from '../';
 import ScanDocuments from 'scan-documents';
@@ -8,6 +10,9 @@ export const metadata: Metadata = {
   resource: 'image_operations',
   operation: 'write',
   tags: [],
+  httpMethod: 'post',
+  httpPath: '/v1/image-operations/extract-text',
+  operationId: 'extractText',
 };
 
 export const tool: Tool = {
@@ -26,7 +31,12 @@ export const tool: Tool = {
           },
           input: {
             type: 'string',
-            description: 'The id of the file to operate on.',
+            description: 'The id of the file or task to operate on.',
+          },
+          callback_url: {
+            type: 'string',
+            description:
+              'The URL to call when the task is completed or failed. If you want to receive events, you probably prefer to use `webhooks` instead.',
           },
         },
       },
@@ -40,7 +50,12 @@ export const tool: Tool = {
           },
           input: {
             type: 'string',
-            description: 'The id of the file to operate on.',
+            description: 'The id of the file or task to operate on.',
+          },
+          callback_url: {
+            type: 'string',
+            description:
+              'The URL to call when the task is completed or failed. If you want to receive events, you probably prefer to use `webhooks` instead.',
           },
         },
       },
@@ -54,7 +69,12 @@ export const tool: Tool = {
           },
           input: {
             type: 'string',
-            description: 'The id of the file to operate on.',
+            description: 'The id of the file or task to operate on.',
+          },
+          callback_url: {
+            type: 'string',
+            description:
+              'The URL to call when the task is completed or failed. If you want to receive events, you probably prefer to use `webhooks` instead.',
           },
         },
       },
@@ -68,40 +88,15 @@ export const tool: Tool = {
           },
           input: {
             type: 'string',
-            description: 'The id of the file to operate on.',
+            description: 'The id of the file or task to operate on.',
           },
           schema: {
-            type: 'object',
+            $ref: '#/$defs/json_schema_spec',
+          },
+          callback_url: {
+            type: 'string',
             description:
-              "An OpenAPI schema object describing the expected JSON structure. Required if format is 'json'.",
-            properties: {
-              description: {
-                type: 'string',
-              },
-              example: {
-                type: 'object',
-              },
-              format: {
-                type: 'string',
-              },
-              items: {
-                $ref: '#/$defs/json_schema_spec',
-              },
-              properties: {
-                type: 'object',
-              },
-              required: {
-                type: 'array',
-                items: {
-                  type: 'string',
-                },
-              },
-              type: {
-                type: 'string',
-                enum: ['string', 'number', 'integer', 'boolean', 'array', 'object'],
-              },
-            },
-            required: [],
+              'The URL to call when the task is completed or failed. If you want to receive events, you probably prefer to use `webhooks` instead.',
           },
         },
       },
@@ -109,6 +104,8 @@ export const tool: Tool = {
     $defs: {
       json_schema_spec: {
         type: 'object',
+        description:
+          "An OpenAPI schema object describing the expected JSON structure. Required if format is 'json'.",
         properties: {
           description: {
             type: 'string',
@@ -142,9 +139,9 @@ export const tool: Tool = {
   },
 };
 
-export const handler = (client: ScanDocuments, args: Record<string, unknown> | undefined) => {
+export const handler = async (client: ScanDocuments, args: Record<string, unknown> | undefined) => {
   const body = args as any;
-  return client.imageOperations.extractText(body);
+  return asTextContentResult(await client.imageOperations.extractText(body));
 };
 
 export default { metadata, tool, handler };

@@ -1,5 +1,7 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
+import { asTextContentResult } from 'scan-documents-mcp/tools/types';
+
 import { Tool } from '@modelcontextprotocol/sdk/types.js';
 import type { Metadata } from '../';
 import ScanDocuments from 'scan-documents';
@@ -8,6 +10,9 @@ export const metadata: Metadata = {
   resource: 'image_operations',
   operation: 'write',
   tags: [],
+  httpMethod: 'post',
+  httpPath: '/v1/image-operations/detect-documents',
+  operationId: 'detectDocuments',
 };
 
 export const tool: Tool = {
@@ -18,15 +23,20 @@ export const tool: Tool = {
     properties: {
       input: {
         type: 'string',
-        description: 'The id of the file to operate on.',
+        description: 'The id of the file or task to operate on.',
+      },
+      callback_url: {
+        type: 'string',
+        description:
+          'The URL to call when the task is completed or failed. If you want to receive events, you probably prefer to use `webhooks` instead.',
       },
     },
   },
 };
 
-export const handler = (client: ScanDocuments, args: Record<string, unknown> | undefined) => {
+export const handler = async (client: ScanDocuments, args: Record<string, unknown> | undefined) => {
   const body = args as any;
-  return client.imageOperations.detectDocuments(body);
+  return asTextContentResult(await client.imageOperations.detectDocuments(body));
 };
 
 export default { metadata, tool, handler };

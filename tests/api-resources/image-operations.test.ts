@@ -28,6 +28,7 @@ describe('resource imageOperations', () => {
     const response = await client.imageOperations.applyEffect({
       effect: 'grayscale',
       input: 'file_avyrvozb9302uwhq',
+      callback_url: 'https://example.com/callback',
       name: 'Example Image',
     });
   });
@@ -52,6 +53,7 @@ describe('resource imageOperations', () => {
     const response = await client.imageOperations.convert({
       input: 'file_avyrvozb9302uwhq',
       target_format: 'image/png',
+      callback_url: 'https://example.com/callback',
       name: 'Example Image',
     });
   });
@@ -70,7 +72,10 @@ describe('resource imageOperations', () => {
 
   // skipped: tests are disabled for the time being
   test.skip('detectDocuments: required and optional params', async () => {
-    const response = await client.imageOperations.detectDocuments({ input: 'file_avyrvozb9302uwhq' });
+    const response = await client.imageOperations.detectDocuments({
+      input: 'file_avyrvozb9302uwhq',
+      callback_url: 'https://example.com/callback',
+    });
   });
 
   // skipped: tests are disabled for the time being
@@ -93,6 +98,7 @@ describe('resource imageOperations', () => {
     const response = await client.imageOperations.extractText({
       format: 'plain',
       input: 'file_avyrvozb9302uwhq',
+      callback_url: 'https://example.com/callback',
     });
   });
 
@@ -126,6 +132,7 @@ describe('resource imageOperations', () => {
         { x: 100, y: 100 },
         { x: 0, y: 90 },
       ],
+      callback_url: 'https://example.com/callback',
       name: 'Example Image',
     });
   });

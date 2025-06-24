@@ -2,7 +2,7 @@
 
 import type { ScanDocuments } from '../client';
 
-export class APIResource {
+export abstract class APIResource {
   protected _client: ScanDocuments;
 
   constructor(client: ScanDocuments) {

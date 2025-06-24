@@ -1,3 +1,9 @@
+# Shared
+
+Types:
+
+- <code><a href="./src/resources/shared.ts">JsonSchemaSpec</a></code>
+
 # Files
 
 Types:
@@ -48,7 +54,6 @@ Types:
 - <code><a href="./src/resources/image-operations.ts">ExtractTextRequest</a></code>
 - <code><a href="./src/resources/image-operations.ts">ExtractTextResponse</a></code>
 - <code><a href="./src/resources/image-operations.ts">ImageFromTaskResponse</a></code>
-- <code><a href="./src/resources/image-operations.ts">JsonSchemaSpec</a></code>
 - <code><a href="./src/resources/image-operations.ts">WarpRequest</a></code>
 - <code><a href="./src/resources/image-operations.ts">WarpResponse</a></code>
 
