@@ -24,7 +24,7 @@ export const tool: Tool = {
     properties: {
       input: {
         type: 'string',
-        description: 'The id of the file to operate on.',
+        description: 'The id of the file or task to operate on.',
       },
       vertices: {
         type: 'array',
@@ -32,6 +32,11 @@ export const tool: Tool = {
         items: {
           type: 'object',
         },
+      },
+      callback_url: {
+        type: 'string',
+        description:
+          'The URL to call when the task is completed or failed. If you want to receive events, you probably prefer to use `webhooks` instead.',
       },
       name: {
         type: 'string',

@@ -26,8 +26,13 @@ export const tool: Tool = {
         description: 'The list of ids of the files to be merged',
         items: {
           type: 'string',
-          description: 'The id of the file to operate on.',
+          description: 'The id of the file or task to operate on.',
         },
+      },
+      callback_url: {
+        type: 'string',
+        description:
+          'The URL to call when the task is completed or failed. If you want to receive events, you probably prefer to use `webhooks` instead.',
       },
       name: {
         type: 'string',

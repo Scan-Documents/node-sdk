@@ -129,6 +129,11 @@ export namespace ExtractPages {
     id: string;
 
     /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
+
+    /**
      * The creation date of the task in ISO format.
      */
     created_at: string;
@@ -156,7 +161,7 @@ export namespace ExtractPages {
   export namespace CompletedExtractPagesTaskResponse {
     export interface Parameters {
       /**
-       * The id of the file to operate on.
+       * The id of the file or task to operate on.
        */
       input: string;
 
@@ -164,6 +169,12 @@ export namespace ExtractPages {
        * Page range (e.g., 2-7), a comma-separated list (e.g., 2,3,7) of pages.
        */
       pages: string;
+
+      /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
 
       /**
        * The name of the file
@@ -181,6 +192,11 @@ export namespace ExtractPages {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -210,7 +226,7 @@ export namespace ExtractPages {
   export namespace PendingExtractPagesTaskResponse {
     export interface Parameters {
       /**
-       * The id of the file to operate on.
+       * The id of the file or task to operate on.
        */
       input: string;
 
@@ -218,6 +234,12 @@ export namespace ExtractPages {
        * Page range (e.g., 2-7), a comma-separated list (e.g., 2,3,7) of pages.
        */
       pages: string;
+
+      /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
 
       /**
        * The name of the file
@@ -231,6 +253,11 @@ export namespace ExtractPages {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -260,7 +287,7 @@ export namespace ExtractPages {
   export namespace ProcessingExtractPagesTaskResponse {
     export interface Parameters {
       /**
-       * The id of the file to operate on.
+       * The id of the file or task to operate on.
        */
       input: string;
 
@@ -268,6 +295,12 @@ export namespace ExtractPages {
        * Page range (e.g., 2-7), a comma-separated list (e.g., 2,3,7) of pages.
        */
       pages: string;
+
+      /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
 
       /**
        * The name of the file
@@ -281,6 +314,11 @@ export namespace ExtractPages {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -310,7 +348,7 @@ export namespace ExtractPages {
   export namespace FailedExtractPagesTaskResponse {
     export interface Parameters {
       /**
-       * The id of the file to operate on.
+       * The id of the file or task to operate on.
        */
       input: string;
 
@@ -318,6 +356,12 @@ export namespace ExtractPages {
        * Page range (e.g., 2-7), a comma-separated list (e.g., 2,3,7) of pages.
        */
       pages: string;
+
+      /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
 
       /**
        * The name of the file
@@ -348,6 +392,11 @@ export namespace Merge {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -382,6 +431,12 @@ export namespace Merge {
       input: Array<string>;
 
       /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
+
+      /**
        * The name of the file
        */
       name?: string;
@@ -397,6 +452,11 @@ export namespace Merge {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -431,6 +491,12 @@ export namespace Merge {
       input: Array<string>;
 
       /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
+
+      /**
        * The name of the file
        */
       name?: string;
@@ -442,6 +508,11 @@ export namespace Merge {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -476,6 +547,12 @@ export namespace Merge {
       input: Array<string>;
 
       /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
+
+      /**
        * The name of the file
        */
       name?: string;
@@ -487,6 +564,11 @@ export namespace Merge {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -521,6 +603,12 @@ export namespace Merge {
       input: Array<string>;
 
       /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
+
+      /**
        * The name of the file
        */
       name?: string;
@@ -549,6 +637,11 @@ export namespace Render {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -583,9 +676,15 @@ export namespace Render {
       dpi: number;
 
       /**
-       * The id of the file to operate on.
+       * The id of the file or task to operate on.
        */
       input: string;
+
+      /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
 
       /**
        * The name of the file
@@ -608,6 +707,11 @@ export namespace Render {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -642,9 +746,15 @@ export namespace Render {
       dpi: number;
 
       /**
-       * The id of the file to operate on.
+       * The id of the file or task to operate on.
        */
       input: string;
+
+      /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
 
       /**
        * The name of the file
@@ -663,6 +773,11 @@ export namespace Render {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -697,9 +812,15 @@ export namespace Render {
       dpi: number;
 
       /**
-       * The id of the file to operate on.
+       * The id of the file or task to operate on.
        */
       input: string;
+
+      /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
 
       /**
        * The name of the file
@@ -718,6 +839,11 @@ export namespace Render {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -752,9 +878,15 @@ export namespace Render {
       dpi: number;
 
       /**
-       * The id of the file to operate on.
+       * The id of the file or task to operate on.
        */
       input: string;
+
+      /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
 
       /**
        * The name of the file
@@ -792,6 +924,11 @@ export namespace Split {
     id: string;
 
     /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
+
+    /**
      * The creation date of the task in ISO format.
      */
     created_at: string;
@@ -819,9 +956,15 @@ export namespace Split {
   export namespace CompletedSplitTaskResponse {
     export interface Parameters {
       /**
-       * The id of the file to operate on.
+       * The id of the file or task to operate on.
        */
       input: string;
+
+      /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
 
       /**
        * The name of the file
@@ -839,6 +982,11 @@ export namespace Split {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -868,9 +1016,15 @@ export namespace Split {
   export namespace PendingSplitTaskResponse {
     export interface Parameters {
       /**
-       * The id of the file to operate on.
+       * The id of the file or task to operate on.
        */
       input: string;
+
+      /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
 
       /**
        * The name of the file
@@ -884,6 +1038,11 @@ export namespace Split {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -913,9 +1072,15 @@ export namespace Split {
   export namespace ProcessingSplitTaskResponse {
     export interface Parameters {
       /**
-       * The id of the file to operate on.
+       * The id of the file or task to operate on.
        */
       input: string;
+
+      /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
 
       /**
        * The name of the file
@@ -929,6 +1094,11 @@ export namespace Split {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -958,9 +1128,15 @@ export namespace Split {
   export namespace FailedSplitTaskResponse {
     export interface Parameters {
       /**
-       * The id of the file to operate on.
+       * The id of the file or task to operate on.
        */
       input: string;
+
+      /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
 
       /**
        * The name of the file
@@ -978,7 +1154,7 @@ export namespace Split {
 
 export interface PdfOperationExtractPagesParams {
   /**
-   * The id of the file to operate on.
+   * The id of the file or task to operate on.
    */
   input: string;
 
@@ -986,6 +1162,12 @@ export interface PdfOperationExtractPagesParams {
    * Page range (e.g., 2-7), a comma-separated list (e.g., 2,3,7) of pages.
    */
   pages: string;
+
+  /**
+   * The URL to call when the task is completed or failed. If you want to receive
+   * events, you probably prefer to use `webhooks` instead.
+   */
+  callback_url?: string;
 
   /**
    * The name of the file
@@ -1000,6 +1182,12 @@ export interface PdfOperationMergeParams {
   input: Array<string>;
 
   /**
+   * The URL to call when the task is completed or failed. If you want to receive
+   * events, you probably prefer to use `webhooks` instead.
+   */
+  callback_url?: string;
+
+  /**
    * The name of the file
    */
   name?: string;
@@ -1007,9 +1195,15 @@ export interface PdfOperationMergeParams {
 
 export interface PdfOperationRenderParams {
   /**
-   * The id of the file to operate on.
+   * The id of the file or task to operate on.
    */
   input: string;
+
+  /**
+   * The URL to call when the task is completed or failed. If you want to receive
+   * events, you probably prefer to use `webhooks` instead.
+   */
+  callback_url?: string;
 
   /**
    * Dots per inch (DPI) for the rendered image. Default is 300.
@@ -1029,9 +1223,15 @@ export interface PdfOperationRenderParams {
 
 export interface PdfOperationSplitParams {
   /**
-   * The id of the file to operate on.
+   * The id of the file or task to operate on.
    */
   input: string;
+
+  /**
+   * The URL to call when the task is completed or failed. If you want to receive
+   * events, you probably prefer to use `webhooks` instead.
+   */
+  callback_url?: string;
 
   /**
    * The name of the file

@@ -118,6 +118,11 @@ export namespace ApplyEffectResponse {
     id: string;
 
     /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
+
+    /**
      * The creation date of the task in ISO format.
      */
     created_at: string;
@@ -150,9 +155,15 @@ export namespace ApplyEffectResponse {
       effect: 'grayscale' | 'scanner' | 'black-background';
 
       /**
-       * The id of the file to operate on.
+       * The id of the file or task to operate on.
        */
       input: string;
+
+      /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
 
       /**
        * The name of the file
@@ -170,6 +181,11 @@ export namespace ApplyEffectResponse {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -204,9 +220,15 @@ export namespace ApplyEffectResponse {
       effect: 'grayscale' | 'scanner' | 'black-background';
 
       /**
-       * The id of the file to operate on.
+       * The id of the file or task to operate on.
        */
       input: string;
+
+      /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
 
       /**
        * The name of the file
@@ -220,6 +242,11 @@ export namespace ApplyEffectResponse {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -254,9 +281,15 @@ export namespace ApplyEffectResponse {
       effect: 'grayscale' | 'scanner' | 'black-background';
 
       /**
-       * The id of the file to operate on.
+       * The id of the file or task to operate on.
        */
       input: string;
+
+      /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
 
       /**
        * The name of the file
@@ -270,6 +303,11 @@ export namespace ApplyEffectResponse {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -304,9 +342,15 @@ export namespace ApplyEffectResponse {
       effect: 'grayscale' | 'scanner' | 'black-background';
 
       /**
-       * The id of the file to operate on.
+       * The id of the file or task to operate on.
        */
       input: string;
+
+      /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
 
       /**
        * The name of the file
@@ -357,7 +401,7 @@ export type ConvertRequest =
 export namespace ConvertRequest {
   export interface PngOptions {
     /**
-     * The id of the file to operate on.
+     * The id of the file or task to operate on.
      */
     input: string;
 
@@ -367,6 +411,12 @@ export namespace ConvertRequest {
     target_format: 'image/png';
 
     /**
+     * The URL to call when the task is completed or failed. If you want to receive
+     * events, you probably prefer to use `webhooks` instead.
+     */
+    callback_url?: string;
+
+    /**
      * The name of the file
      */
     name?: string;
@@ -374,7 +424,7 @@ export namespace ConvertRequest {
 
   export interface JpegOptions {
     /**
-     * The id of the file to operate on.
+     * The id of the file or task to operate on.
      */
     input: string;
 
@@ -389,6 +439,12 @@ export namespace ConvertRequest {
     target_format: 'image/jpeg';
 
     /**
+     * The URL to call when the task is completed or failed. If you want to receive
+     * events, you probably prefer to use `webhooks` instead.
+     */
+    callback_url?: string;
+
+    /**
      * The name of the file
      */
     name?: string;
@@ -396,7 +452,7 @@ export namespace ConvertRequest {
 
   export interface WebpOptions {
     /**
-     * The id of the file to operate on.
+     * The id of the file or task to operate on.
      */
     input: string;
 
@@ -409,6 +465,12 @@ export namespace ConvertRequest {
      * The format to convert the image to.
      */
     target_format: 'image/webp';
+
+    /**
+     * The URL to call when the task is completed or failed. If you want to receive
+     * events, you probably prefer to use `webhooks` instead.
+     */
+    callback_url?: string;
 
     /**
      * The name of the file
@@ -432,6 +494,11 @@ export namespace ConvertResponse {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -471,6 +538,11 @@ export namespace ConvertResponse {
     id: string;
 
     /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
+
+    /**
      * The creation date of the task in ISO format.
      */
     created_at: string;
@@ -502,6 +574,11 @@ export namespace ConvertResponse {
     id: string;
 
     /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
+
+    /**
      * The creation date of the task in ISO format.
      */
     created_at: string;
@@ -531,6 +608,11 @@ export namespace ConvertResponse {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -595,6 +677,11 @@ export namespace DetectDocumentsResponse {
     id: string;
 
     /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
+
+    /**
      * The creation date of the task in ISO format.
      */
     created_at: string;
@@ -635,6 +722,11 @@ export namespace DetectDocumentsResponse {
         bounding_box: ImageOperationsAPI.BoundingBox;
 
         /**
+         * The ID of the file containing the document
+         */
+        file_id: string;
+
+        /**
          * The coordinates of the vertex inside the image
          */
         vertices: Array<ImageOperationsAPI.CoordinatesItem>;
@@ -647,6 +739,11 @@ export namespace DetectDocumentsResponse {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -680,6 +777,11 @@ export namespace DetectDocumentsResponse {
     id: string;
 
     /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
+
+    /**
      * The creation date of the task in ISO format.
      */
     created_at: string;
@@ -709,6 +811,11 @@ export namespace DetectDocumentsResponse {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -761,9 +868,15 @@ export namespace ExtractTextRequest {
     format: 'plain';
 
     /**
-     * The id of the file to operate on.
+     * The id of the file or task to operate on.
      */
     input: string;
+
+    /**
+     * The URL to call when the task is completed or failed. If you want to receive
+     * events, you probably prefer to use `webhooks` instead.
+     */
+    callback_url?: string;
   }
 
   export interface Markdown {
@@ -773,9 +886,15 @@ export namespace ExtractTextRequest {
     format: 'markdown';
 
     /**
-     * The id of the file to operate on.
+     * The id of the file or task to operate on.
      */
     input: string;
+
+    /**
+     * The URL to call when the task is completed or failed. If you want to receive
+     * events, you probably prefer to use `webhooks` instead.
+     */
+    callback_url?: string;
   }
 
   export interface HTML {
@@ -785,9 +904,15 @@ export namespace ExtractTextRequest {
     format: 'html';
 
     /**
-     * The id of the file to operate on.
+     * The id of the file or task to operate on.
      */
     input: string;
+
+    /**
+     * The URL to call when the task is completed or failed. If you want to receive
+     * events, you probably prefer to use `webhooks` instead.
+     */
+    callback_url?: string;
   }
 
   export interface Json {
@@ -797,7 +922,7 @@ export namespace ExtractTextRequest {
     format: 'json';
 
     /**
-     * The id of the file to operate on.
+     * The id of the file or task to operate on.
      */
     input: string;
 
@@ -806,6 +931,12 @@ export namespace ExtractTextRequest {
      * format is 'json'.
      */
     schema: Shared.JsonSchemaSpec;
+
+    /**
+     * The URL to call when the task is completed or failed. If you want to receive
+     * events, you probably prefer to use `webhooks` instead.
+     */
+    callback_url?: string;
   }
 }
 
@@ -824,6 +955,11 @@ export namespace ExtractTextResponse {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -868,6 +1004,11 @@ export namespace ExtractTextResponse {
     id: string;
 
     /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
+
+    /**
      * The creation date of the task in ISO format.
      */
     created_at: string;
@@ -902,6 +1043,11 @@ export namespace ExtractTextResponse {
     id: string;
 
     /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
+
+    /**
      * The creation date of the task in ISO format.
      */
     created_at: string;
@@ -934,6 +1080,11 @@ export namespace ExtractTextResponse {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -1028,7 +1179,7 @@ export namespace ImageFromTaskResponse {
  */
 export interface WarpRequest {
   /**
-   * The id of the file to operate on.
+   * The id of the file or task to operate on.
    */
   input: string;
 
@@ -1036,6 +1187,12 @@ export interface WarpRequest {
    * Coordinates of the 4 vertices of the quadrilateral to warp the image to.
    */
   vertices: Array<unknown>;
+
+  /**
+   * The URL to call when the task is completed or failed. If you want to receive
+   * events, you probably prefer to use `webhooks` instead.
+   */
+  callback_url?: string;
 
   /**
    * The name of the file
@@ -1058,6 +1215,11 @@ export namespace WarpResponse {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -1100,6 +1262,11 @@ export namespace WarpResponse {
     id: string;
 
     /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
+
+    /**
      * The creation date of the task in ISO format.
      */
     created_at: string;
@@ -1134,6 +1301,11 @@ export namespace WarpResponse {
     id: string;
 
     /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
+
+    /**
      * The creation date of the task in ISO format.
      */
     created_at: string;
@@ -1166,6 +1338,11 @@ export namespace WarpResponse {
      * The unique identifier for the task.
      */
     id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
 
     /**
      * The creation date of the task in ISO format.
@@ -1211,9 +1388,15 @@ export interface ImageOperationApplyEffectParams {
   effect: 'grayscale' | 'scanner' | 'black-background';
 
   /**
-   * The id of the file to operate on.
+   * The id of the file or task to operate on.
    */
   input: string;
+
+  /**
+   * The URL to call when the task is completed or failed. If you want to receive
+   * events, you probably prefer to use `webhooks` instead.
+   */
+  callback_url?: string;
 
   /**
    * The name of the file
@@ -1229,7 +1412,7 @@ export type ImageOperationConvertParams =
 export declare namespace ImageOperationConvertParams {
   export interface PngOptions {
     /**
-     * The id of the file to operate on.
+     * The id of the file or task to operate on.
      */
     input: string;
 
@@ -1239,6 +1422,12 @@ export declare namespace ImageOperationConvertParams {
     target_format: 'image/png';
 
     /**
+     * The URL to call when the task is completed or failed. If you want to receive
+     * events, you probably prefer to use `webhooks` instead.
+     */
+    callback_url?: string;
+
+    /**
      * The name of the file
      */
     name?: string;
@@ -1246,7 +1435,7 @@ export declare namespace ImageOperationConvertParams {
 
   export interface JpegOptions {
     /**
-     * The id of the file to operate on.
+     * The id of the file or task to operate on.
      */
     input: string;
 
@@ -1261,6 +1450,12 @@ export declare namespace ImageOperationConvertParams {
     target_format: 'image/jpeg';
 
     /**
+     * The URL to call when the task is completed or failed. If you want to receive
+     * events, you probably prefer to use `webhooks` instead.
+     */
+    callback_url?: string;
+
+    /**
      * The name of the file
      */
     name?: string;
@@ -1268,7 +1463,7 @@ export declare namespace ImageOperationConvertParams {
 
   export interface WebpOptions {
     /**
-     * The id of the file to operate on.
+     * The id of the file or task to operate on.
      */
     input: string;
 
@@ -1283,6 +1478,12 @@ export declare namespace ImageOperationConvertParams {
     target_format: 'image/webp';
 
     /**
+     * The URL to call when the task is completed or failed. If you want to receive
+     * events, you probably prefer to use `webhooks` instead.
+     */
+    callback_url?: string;
+
+    /**
      * The name of the file
      */
     name?: string;
@@ -1291,9 +1492,15 @@ export declare namespace ImageOperationConvertParams {
 
 export interface ImageOperationDetectDocumentsParams {
   /**
-   * The id of the file to operate on.
+   * The id of the file or task to operate on.
    */
   input: string;
+
+  /**
+   * The URL to call when the task is completed or failed. If you want to receive
+   * events, you probably prefer to use `webhooks` instead.
+   */
+  callback_url?: string;
 }
 
 export type ImageOperationExtractTextParams =
@@ -1310,9 +1517,15 @@ export declare namespace ImageOperationExtractTextParams {
     format: 'plain';
 
     /**
-     * The id of the file to operate on.
+     * The id of the file or task to operate on.
      */
     input: string;
+
+    /**
+     * The URL to call when the task is completed or failed. If you want to receive
+     * events, you probably prefer to use `webhooks` instead.
+     */
+    callback_url?: string;
   }
 
   export interface Markdown {
@@ -1322,9 +1535,15 @@ export declare namespace ImageOperationExtractTextParams {
     format: 'markdown';
 
     /**
-     * The id of the file to operate on.
+     * The id of the file or task to operate on.
      */
     input: string;
+
+    /**
+     * The URL to call when the task is completed or failed. If you want to receive
+     * events, you probably prefer to use `webhooks` instead.
+     */
+    callback_url?: string;
   }
 
   export interface HTML {
@@ -1334,9 +1553,15 @@ export declare namespace ImageOperationExtractTextParams {
     format: 'html';
 
     /**
-     * The id of the file to operate on.
+     * The id of the file or task to operate on.
      */
     input: string;
+
+    /**
+     * The URL to call when the task is completed or failed. If you want to receive
+     * events, you probably prefer to use `webhooks` instead.
+     */
+    callback_url?: string;
   }
 
   export interface Json {
@@ -1346,7 +1571,7 @@ export declare namespace ImageOperationExtractTextParams {
     format: 'json';
 
     /**
-     * The id of the file to operate on.
+     * The id of the file or task to operate on.
      */
     input: string;
 
@@ -1355,12 +1580,18 @@ export declare namespace ImageOperationExtractTextParams {
      * format is 'json'.
      */
     schema: Shared.JsonSchemaSpec;
+
+    /**
+     * The URL to call when the task is completed or failed. If you want to receive
+     * events, you probably prefer to use `webhooks` instead.
+     */
+    callback_url?: string;
   }
 }
 
 export interface ImageOperationWarpParams {
   /**
-   * The id of the file to operate on.
+   * The id of the file or task to operate on.
    */
   input: string;
 
@@ -1368,6 +1599,12 @@ export interface ImageOperationWarpParams {
    * Coordinates of the 4 vertices of the quadrilateral to warp the image to.
    */
   vertices: Array<unknown>;
+
+  /**
+   * The URL to call when the task is completed or failed. If you want to receive
+   * events, you probably prefer to use `webhooks` instead.
+   */
+  callback_url?: string;
 
   /**
    * The name of the file

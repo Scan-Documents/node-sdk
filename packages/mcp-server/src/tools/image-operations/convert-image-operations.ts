@@ -26,12 +26,17 @@ export const tool: Tool = {
         properties: {
           input: {
             type: 'string',
-            description: 'The id of the file to operate on.',
+            description: 'The id of the file or task to operate on.',
           },
           target_format: {
             type: 'string',
             description: 'The format to convert the image to.',
             enum: ['image/png'],
+          },
+          callback_url: {
+            type: 'string',
+            description:
+              'The URL to call when the task is completed or failed. If you want to receive events, you probably prefer to use `webhooks` instead.',
           },
           name: {
             type: 'string',
@@ -44,7 +49,7 @@ export const tool: Tool = {
         properties: {
           input: {
             type: 'string',
-            description: 'The id of the file to operate on.',
+            description: 'The id of the file or task to operate on.',
           },
           quality: {
             type: 'number',
@@ -55,6 +60,11 @@ export const tool: Tool = {
             description: 'The format to convert the image to.',
             enum: ['image/jpeg'],
           },
+          callback_url: {
+            type: 'string',
+            description:
+              'The URL to call when the task is completed or failed. If you want to receive events, you probably prefer to use `webhooks` instead.',
+          },
           name: {
             type: 'string',
             description: 'The name of the file',
@@ -66,7 +76,7 @@ export const tool: Tool = {
         properties: {
           input: {
             type: 'string',
-            description: 'The id of the file to operate on.',
+            description: 'The id of the file or task to operate on.',
           },
           quality: {
             type: 'number',
@@ -76,6 +86,11 @@ export const tool: Tool = {
             type: 'string',
             description: 'The format to convert the image to.',
             enum: ['image/webp'],
+          },
+          callback_url: {
+            type: 'string',
+            description:
+              'The URL to call when the task is completed or failed. If you want to receive events, you probably prefer to use `webhooks` instead.',
           },
           name: {
             type: 'string',

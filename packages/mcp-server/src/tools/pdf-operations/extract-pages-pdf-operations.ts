@@ -23,11 +23,16 @@ export const tool: Tool = {
     properties: {
       input: {
         type: 'string',
-        description: 'The id of the file to operate on.',
+        description: 'The id of the file or task to operate on.',
       },
       pages: {
         type: 'string',
         description: 'Page range (e.g., 2-7), a comma-separated list (e.g., 2,3,7)  of pages.',
+      },
+      callback_url: {
+        type: 'string',
+        description:
+          'The URL to call when the task is completed or failed. If you want to receive events, you probably prefer to use `webhooks` instead.',
       },
       name: {
         type: 'string',
