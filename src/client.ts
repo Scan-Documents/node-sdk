@@ -32,8 +32,10 @@ import {
   ImageOperationConvertParams,
   ImageOperationDetectDocumentsParams,
   ImageOperationExtractTextParams,
+  ImageOperationScanParams,
   ImageOperationWarpParams,
   ImageOperations,
+  ScanResponse,
   WarpRequest,
   WarpResponse,
 } from './resources/image-operations';
@@ -788,12 +790,14 @@ export declare namespace ScanDocuments {
     type ExtractTextRequest as ExtractTextRequest,
     type ExtractTextResponse as ExtractTextResponse,
     type ImageFromTaskResponse as ImageFromTaskResponse,
+    type ScanResponse as ScanResponse,
     type WarpRequest as WarpRequest,
     type WarpResponse as WarpResponse,
     type ImageOperationApplyEffectParams as ImageOperationApplyEffectParams,
     type ImageOperationConvertParams as ImageOperationConvertParams,
     type ImageOperationDetectDocumentsParams as ImageOperationDetectDocumentsParams,
     type ImageOperationExtractTextParams as ImageOperationExtractTextParams,
+    type ImageOperationScanParams as ImageOperationScanParams,
     type ImageOperationWarpParams as ImageOperationWarpParams,
   };
 

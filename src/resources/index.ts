@@ -14,12 +14,14 @@ export {
   type ExtractTextRequest,
   type ExtractTextResponse,
   type ImageFromTaskResponse,
+  type ScanResponse,
   type WarpRequest,
   type WarpResponse,
   type ImageOperationApplyEffectParams,
   type ImageOperationConvertParams,
   type ImageOperationDetectDocumentsParams,
   type ImageOperationExtractTextParams,
+  type ImageOperationScanParams,
   type ImageOperationWarpParams,
 } from './image-operations';
 export {

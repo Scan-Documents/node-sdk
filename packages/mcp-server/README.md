@@ -188,6 +188,8 @@ The following tools are available in this MCP server.
 - `convert_image_operations` (`write`): Creates a task to convert an image file to a different format.
 - `detect_documents_image_operations` (`write`): Creates a task to detect document boundaries within an image.
 - `extract_text_image_operations` (`write`): Creates a task to extract text from a specified image file.
+- `scan_image_operations` (`write`): Creates a task to scan an image file.
+  This is an equivalent operation for `detect-documents` and `warp` combined, additionally it can apply effects to the scanned image.
 - `warp_image_operations` (`write`): Creates a task to apply perspective correction (warp) to an image based on detected document boundaries.
 
 ### Resource `pdf_operations`:
