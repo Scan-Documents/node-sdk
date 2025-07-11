@@ -17,7 +17,8 @@ export const metadata: Metadata = {
 
 export const tool: Tool = {
   name: 'extract_pages_pdf_operations',
-  description: 'Creates a task to extract specific pages from a PDF file into a new PDF file.',
+  description:
+    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nCreates a task to extract specific pages from a PDF file into a new PDF file.",
   inputSchema: {
     type: 'object',
     properties: {

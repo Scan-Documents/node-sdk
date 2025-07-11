@@ -17,7 +17,8 @@ export const metadata: Metadata = {
 
 export const tool: Tool = {
   name: 'list_tasks',
-  description: 'Retrieves a paginated list of tasks belonging to the authenticated user.',
+  description:
+    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nRetrieves a paginated list of tasks belonging to the authenticated user.",
   inputSchema: {
     type: 'object',
     properties: {
