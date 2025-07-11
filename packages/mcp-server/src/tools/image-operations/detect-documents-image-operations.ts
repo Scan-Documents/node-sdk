@@ -17,7 +17,8 @@ export const metadata: Metadata = {
 
 export const tool: Tool = {
   name: 'detect_documents_image_operations',
-  description: 'Creates a task to detect document boundaries within an image.',
+  description:
+    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nCreates a task to detect document boundaries within an image.",
   inputSchema: {
     type: 'object',
     properties: {

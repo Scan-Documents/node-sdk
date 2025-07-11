@@ -17,7 +17,8 @@ export const metadata: Metadata = {
 
 export const tool: Tool = {
   name: 'extract_text_image_operations',
-  description: 'Creates a task to extract text from a specified image file.',
+  description:
+    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nCreates a task to extract text from a specified image file.",
   inputSchema: {
     type: 'object',
     anyOf: [

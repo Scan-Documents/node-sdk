@@ -17,7 +17,8 @@ export const metadata: Metadata = {
 
 export const tool: Tool = {
   name: 'split_pdf_operations',
-  description: 'Creates a task to split a PDF file into multiple single-page PDF files.',
+  description:
+    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nCreates a task to split a PDF file into multiple single-page PDF files.",
   inputSchema: {
     type: 'object',
     properties: {
