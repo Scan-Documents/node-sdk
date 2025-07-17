@@ -28,11 +28,7 @@ export const server = new McpServer(
     name: 'scan_documents_api',
     version: '0.1.0-alpha.5',
   },
-  {
-    capabilities: {
-      tools: {},
-    },
-  },
+  { capabilities: { tools: {} } },
 );
 
 /**
