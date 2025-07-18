@@ -43,6 +43,7 @@ export const tool: Tool = {
         description: 'Page range (e.g., 2-7), a comma-separated list (e.g., 2,3,7)  of pages.',
       },
     },
+    required: ['input'],
   },
 };
 

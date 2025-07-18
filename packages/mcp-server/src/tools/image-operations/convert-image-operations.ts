@@ -43,6 +43,7 @@ export const tool: Tool = {
             description: 'The name of the file',
           },
         },
+        required: ['input', 'target_format'],
       },
       {
         type: 'object',
@@ -70,6 +71,7 @@ export const tool: Tool = {
             description: 'The name of the file',
           },
         },
+        required: ['input', 'quality', 'target_format'],
       },
       {
         type: 'object',
@@ -97,6 +99,7 @@ export const tool: Tool = {
             description: 'The name of the file',
           },
         },
+        required: ['input', 'quality', 'target_format'],
       },
     ],
   },

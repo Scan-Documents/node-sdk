@@ -28,6 +28,7 @@ export const tool: Tool = {
         type: 'number',
       },
     },
+    required: [],
   },
 };
 
