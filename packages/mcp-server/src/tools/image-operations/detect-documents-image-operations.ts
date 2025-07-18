@@ -31,6 +31,7 @@ export const tool: Tool = {
           'The URL to call when the task is completed or failed. If you want to receive events, you probably prefer to use `webhooks` instead.',
       },
     },
+    required: ['input'],
   },
 };
 

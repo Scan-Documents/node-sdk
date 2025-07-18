@@ -40,6 +40,7 @@ export const tool: Tool = {
         description: 'The name of the file',
       },
     },
+    required: ['effect', 'input'],
   },
 };
 
