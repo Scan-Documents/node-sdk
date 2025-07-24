@@ -103,6 +103,7 @@ export const tool: Tool = {
       },
     ],
   },
+  annotations: {},
 };
 
 export const handler = async (client: ScanDocuments, args: Record<string, unknown> | undefined) => {

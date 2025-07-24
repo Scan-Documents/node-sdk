@@ -39,6 +39,7 @@ export const tool: Tool = {
     },
     required: ['file', 'name'],
   },
+  annotations: {},
 };
 
 export const handler = async (client: ScanDocuments, args: Record<string, unknown> | undefined) => {
