@@ -48,6 +48,7 @@ export const tool: Tool = {
     },
     required: ['effect', 'input', 'scan_mode'],
   },
+  annotations: {},
 };
 
 export const handler = async (client: ScanDocuments, args: Record<string, unknown> | undefined) => {

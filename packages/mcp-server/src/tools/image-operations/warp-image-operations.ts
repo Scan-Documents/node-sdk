@@ -44,6 +44,7 @@ export const tool: Tool = {
     },
     required: ['input', 'vertices'],
   },
+  annotations: {},
 };
 
 export const handler = async (client: ScanDocuments, args: Record<string, unknown> | undefined) => {
