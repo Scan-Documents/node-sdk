@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 export const tool: Tool = {
   name: 'warp_image_operations',
   description:
-    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nCreates a task to apply perspective correction (warp) to an image based on detected document boundaries.",
+    'Creates a task to apply perspective correction (warp) to an image based on detected document boundaries.',
   inputSchema: {
     type: 'object',
     properties: {
