@@ -115,6 +115,7 @@ export const tool: Tool = {
           },
           example: {
             type: 'object',
+            additionalProperties: true,
           },
           format: {
             type: 'string',
@@ -124,6 +125,7 @@ export const tool: Tool = {
           },
           properties: {
             type: 'object',
+            additionalProperties: true,
           },
           required: {
             type: 'array',

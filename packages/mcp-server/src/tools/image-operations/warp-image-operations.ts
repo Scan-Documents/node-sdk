@@ -30,6 +30,7 @@ export const tool: Tool = {
         description: 'Coordinates of the 4 vertices of the quadrilateral to warp the image to.',
         items: {
           type: 'object',
+          additionalProperties: true,
         },
       },
       callback_url: {
