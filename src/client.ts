@@ -755,11 +755,13 @@ export class ScanDocuments {
   imageOperations: API.ImageOperations = new API.ImageOperations(this);
   pdfOperations: API.PdfOperations = new API.PdfOperations(this);
 }
+
 ScanDocuments.Files = Files;
 ScanDocuments.Tasks = Tasks;
 ScanDocuments.Events = Events;
 ScanDocuments.ImageOperations = ImageOperations;
 ScanDocuments.PdfOperations = PdfOperations;
+
 export declare namespace ScanDocuments {
   export type RequestOptions = Opts.RequestOptions;
 
