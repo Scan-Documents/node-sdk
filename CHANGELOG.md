@@ -1,5 +1,67 @@
 # Changelog
 
+## 0.1.0-alpha.6 (2025-08-24)
+
+Full Changelog: [v0.1.0-alpha.5...v0.1.0-alpha.6](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.5...v0.1.0-alpha.6)
+
+### Features
+
+* **api:** update via SDK Studio ([29066c7](https://github.com/Scan-Documents/node-sdk/commit/29066c78a803d4eb260385bdf2a3e7748390b91d))
+* **mcp:** add code execution tool ([c36e7ab](https://github.com/Scan-Documents/node-sdk/commit/c36e7ab1ffe8f98f94603aa729b080bd16e034c4))
+* **mcp:** add logging when environment variable is set ([57fc795](https://github.com/Scan-Documents/node-sdk/commit/57fc7959d83c30d25152a60aeb8895df38ab15b8))
+* **mcp:** add option to infer mcp client ([149e514](https://github.com/Scan-Documents/node-sdk/commit/149e5145317a38b8acb37ec99948fc3aab8a2a2b))
+* **mcp:** add unix socket option for remote MCP ([72982bc](https://github.com/Scan-Documents/node-sdk/commit/72982bc112a6a5725956354b361944069cf92faa))
+* **mcp:** fallback for void-typed methods ([965b606](https://github.com/Scan-Documents/node-sdk/commit/965b6064ff025b992e21c9fd54edbe6963d27b6b))
+* **mcp:** parse query string as mcp client options in mcp server ([a72cd42](https://github.com/Scan-Documents/node-sdk/commit/a72cd4273cb2efc360656de84e17c94d2ba21c25))
+* **mcp:** remote server with passthru auth ([05f1022](https://github.com/Scan-Documents/node-sdk/commit/05f1022cf2d8897c5ca52bdac865fea951dabc39))
+* **mcp:** support filtering tool results by a jq expression ([436421e](https://github.com/Scan-Documents/node-sdk/commit/436421e66b382295d19149478a5cabb21bce12a6))
+
+
+### Bug Fixes
+
+* **ci:** release-doctor — report correct token name ([2430747](https://github.com/Scan-Documents/node-sdk/commit/2430747fe786df1a9e237b884c59082cfc21a2bf))
+* **client:** get fetchOptions type more reliably ([0a17458](https://github.com/Scan-Documents/node-sdk/commit/0a17458ddfe37d5b3e5c10f7e257fad3e2d08129))
+* **mcp:** avoid sending `jq_filter` to base API ([11b40cc](https://github.com/Scan-Documents/node-sdk/commit/11b40cca569792c127c204a6ca9c39e688b182be))
+* **mcp:** fix tool description of jq_filter ([33effa6](https://github.com/Scan-Documents/node-sdk/commit/33effa6ccb54e2da65a9aaad00bcbb7070e2bdd0))
+* **mcp:** generate additionalProperties=true for map schemas to avoid validation issues ([488ee1c](https://github.com/Scan-Documents/node-sdk/commit/488ee1c68366d5253d75565838c2c3447af525b1))
+* **mcp:** include required section for top-level properties and support naming transformations ([f7827a6](https://github.com/Scan-Documents/node-sdk/commit/f7827a6390ec0922cdc039344f47774cf588da14))
+* **mcp:** relax input type for asTextContextResult ([7f50ae3](https://github.com/Scan-Documents/node-sdk/commit/7f50ae35b174c4e7863bfc71c71ce70f71893ef7))
+* **mcp:** reverse validJson capability option and limit scope ([41bd333](https://github.com/Scan-Documents/node-sdk/commit/41bd333e563e4b23100f1f239928aa8c60fc223c))
+* **mcp:** support jq filtering on cloudflare workers ([d2bee12](https://github.com/Scan-Documents/node-sdk/commit/d2bee126b3794e12e7a66fd1df7600a89c7adf7a))
+
+
+### Chores
+
+* add docs to RequestOptions type ([26a2df1](https://github.com/Scan-Documents/node-sdk/commit/26a2df16f3133c6f3ebfa06a906ccbdb667b763c))
+* add package to package.json ([52c2226](https://github.com/Scan-Documents/node-sdk/commit/52c22269924c2992a427ce0136bf1f9effd4da8b))
+* **ci:** only run for pushes and fork pull requests ([fedf819](https://github.com/Scan-Documents/node-sdk/commit/fedf819df77819d08582e26bf2d768a0971684d0))
+* **client:** improve path param validation ([00bb123](https://github.com/Scan-Documents/node-sdk/commit/00bb1237344ad7b4d3cafb5ee3f8015033f581ad))
+* **client:** qualify global Blob ([b110292](https://github.com/Scan-Documents/node-sdk/commit/b110292d90aa445e9d73dd7cfa77d2bd57e46aa9))
+* **deps:** update dependency @types/node to v20.17.58 ([b435ab1](https://github.com/Scan-Documents/node-sdk/commit/b435ab1ef8e26e20a35842579846c87cd20ff4be))
+* **internal:** codegen related update ([5560f78](https://github.com/Scan-Documents/node-sdk/commit/5560f78a373d434a2b1a86f57fd14da284581bc0))
+* **internal:** codegen related update ([3554f3c](https://github.com/Scan-Documents/node-sdk/commit/3554f3cab5ce7969889c889bb833e8aa45740159))
+* **internal:** codegen related update ([4d9ab35](https://github.com/Scan-Documents/node-sdk/commit/4d9ab3563cfe93b7a61097a484e9f37f7604c5b7))
+* **internal:** codegen related update ([b47458d](https://github.com/Scan-Documents/node-sdk/commit/b47458d7c6269e4acbfc6fb4b469597581633e49))
+* **internal:** formatting change ([5a0343c](https://github.com/Scan-Documents/node-sdk/commit/5a0343c3751c96f3637abfd0ea84df271abf70a2))
+* **internal:** make mcp-server publishing public by defaut ([cb532ff](https://github.com/Scan-Documents/node-sdk/commit/cb532ff281e968d46b3d5dd5710d36ac9bdd530e))
+* **internal:** move publish config ([1947212](https://github.com/Scan-Documents/node-sdk/commit/1947212b285dd090527c98fb607308003036e1e3))
+* **internal:** refactor array check ([39a25bf](https://github.com/Scan-Documents/node-sdk/commit/39a25bf20d4cafdca951e6aa0fa0bf74a00b378f))
+* **internal:** remove redundant imports config ([cfe049c](https://github.com/Scan-Documents/node-sdk/commit/cfe049c407230ed71a4216f893cedb1c85ba856e))
+* **internal:** update comment in script ([3be780c](https://github.com/Scan-Documents/node-sdk/commit/3be780cb1d9bc7136a79a2f130617a42bd38b081))
+* make some internal functions async ([064caed](https://github.com/Scan-Documents/node-sdk/commit/064caed6799b56c06d441e02319f31ca79f0549f))
+* **mcp:** add cors to oauth metadata route ([e47261c](https://github.com/Scan-Documents/node-sdk/commit/e47261c644a962bc76c7ad5afb92ded38034098d))
+* **mcp:** document remote server in README.md ([64f8b3a](https://github.com/Scan-Documents/node-sdk/commit/64f8b3a076b881b43878aa2e78c2942a6b53d98d))
+* **mcp:** formatting ([32923a2](https://github.com/Scan-Documents/node-sdk/commit/32923a200bbe8c6ba2658428be044bd14e5f09cb))
+* **mcp:** minor cleanup of types and package.json ([938a40b](https://github.com/Scan-Documents/node-sdk/commit/938a40bc3dc1b8f4cacdea781c23dea0680ac1eb))
+* **mcp:** refactor streamable http transport ([8a955ea](https://github.com/Scan-Documents/node-sdk/commit/8a955eaa7bb01a0a85817567cd0000a15cdca487))
+* **mcp:** rework imports in tools ([df24a2f](https://github.com/Scan-Documents/node-sdk/commit/df24a2f821d16e2ef006bf6715be5d87b1179a83))
+* **mcp:** update package.json ([261f3f5](https://github.com/Scan-Documents/node-sdk/commit/261f3f5cef6e12b4d435264bc11ce5cc52f6ec6b))
+* **mcp:** update README ([b821690](https://github.com/Scan-Documents/node-sdk/commit/b821690f1b0a2494dcb6b2ab0643a212b4a040dc))
+* **mcp:** update types ([079839c](https://github.com/Scan-Documents/node-sdk/commit/079839c4089e8cf828d49a36339dc8764e1b6e71))
+* **ts:** reorder package.json imports ([596fc4f](https://github.com/Scan-Documents/node-sdk/commit/596fc4f6d1323ceeecf8eef62cc165d5430f9069))
+* update @stainless-api/prism-cli to v5.15.0 ([b609b33](https://github.com/Scan-Documents/node-sdk/commit/b609b338d3f8db485a3ede5f4fe920db21c79149))
+* update CI script ([2ace297](https://github.com/Scan-Documents/node-sdk/commit/2ace29730fa8c3b74531c0945e955b1339fafc6c))
+
 ## 0.1.0-alpha.5 (2025-06-24)
 
 Full Changelog: [v0.1.0-alpha.4...v0.1.0-alpha.5](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.4...v0.1.0-alpha.5)
