@@ -6,27 +6,35 @@ import { Tool } from '@modelcontextprotocol/sdk/types.js';
 import ScanDocuments from 'scan-documents';
 
 export const metadata: Metadata = {
-  resource: 'pdf_operations',
+  resource: 'image_operations',
   operation: 'write',
   tags: [],
   httpMethod: 'post',
-  httpPath: '/v1/pdf-operations/extract-pages',
-  operationId: 'extractPdfPages',
+  httpPath: '/v1/image-operations/scan',
+  operationId: 'scanImage',
 };
 
 export const tool: Tool = {
-  name: 'extract_pages_pdf_operations',
-  description: 'Creates a task to extract specific pages from a PDF file into a new PDF file.',
+  name: 'scan_image_operations',
+  description:
+    'Creates a task to scan an image file. \nThis is an equivalent operation for `detect-documents` and `warp` combined, additionally it can apply effects to the scanned image.',
   inputSchema: {
     type: 'object',
     properties: {
+      effect: {
+        type: 'string',
+        description: 'The effect to apply to the image',
+        enum: ['none', 'grayscale', 'scanner', 'black-background'],
+      },
       input: {
         type: 'string',
         description: 'The id of the file or task to operate on.',
       },
-      pages: {
+      scan_mode: {
         type: 'string',
-        description: 'Page range (e.g., 2-7), a comma-separated list (e.g., 2,3,7)  of pages.',
+        description:
+          "Mode for detecting documents in the image. Available modes are:\n- **none**: No document detection is performed.\n- **standard**: Using a quick algorithm. Document is detected in the image, and the image is cropped to the detected document area fixing the perspective to match the document's shape.",
+        enum: ['none', 'standard'],
       },
       callback_url: {
         type: 'string',
@@ -38,14 +46,14 @@ export const tool: Tool = {
         description: 'The name of the file',
       },
     },
-    required: ['input', 'pages'],
+    required: ['effect', 'input', 'scan_mode'],
   },
   annotations: {},
 };
 
 export const handler = async (client: ScanDocuments, args: Record<string, unknown> | undefined) => {
   const body = args as any;
-  return asTextContentResult(await client.pdfOperations.extractPages(body));
+  return asTextContentResult(await client.imageOperations.scan(body));
 };
 
 export default { metadata, tool, handler };

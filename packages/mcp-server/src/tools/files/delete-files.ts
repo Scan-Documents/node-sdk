@@ -1,9 +1,8 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { asTextContentResult } from 'scan-documents-mcp/tools/types';
+import { Metadata, asTextContentResult } from 'scan-documents-mcp/tools/types';
 
 import { Tool } from '@modelcontextprotocol/sdk/types.js';
-import type { Metadata } from '../';
 import ScanDocuments from 'scan-documents';
 
 export const metadata: Metadata = {
@@ -25,13 +24,17 @@ export const tool: Tool = {
         type: 'string',
       },
     },
+    required: ['id'],
+  },
+  annotations: {
+    idempotentHint: true,
   },
 };
 
 export const handler = async (client: ScanDocuments, args: Record<string, unknown> | undefined) => {
   const { id, ...body } = args as any;
-  await client.files.delete(id);
-  return asTextContentResult('Successful tool call');
+  const response = await client.files.delete(id).asResponse();
+  return asTextContentResult(await response.text());
 };
 
 export default { metadata, tool, handler };

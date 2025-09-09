@@ -79,7 +79,6 @@ await client.files.upload({ file: await toFile(Buffer.from('my bytes'), 'file'),
 await client.files.upload({ file: await toFile(new Uint8Array([0, 1, 2]), 'file'), name: 'File Name' });
 ```
 
-
 ## Task operations
 
 Operations can be found under the `imageOperations` and `pdfOperations` resources.

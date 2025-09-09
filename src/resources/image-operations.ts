@@ -80,6 +80,24 @@ export class ImageOperations extends APIResource {
   }
 
   /**
+   * Creates a task to scan an image file. This is an equivalent operation for
+   * `detect-documents` and `warp` combined, additionally it can apply effects to the
+   * scanned image.
+   *
+   * @example
+   * ```ts
+   * const scanResponse = await client.imageOperations.scan({
+   *   effect: 'none',
+   *   input: 'file_avyrvozb9302uwhq',
+   *   scan_mode: 'standard',
+   * });
+   * ```
+   */
+  scan(body: ImageOperationScanParams, options?: RequestOptions): APIPromise<ScanResponse> {
+    return this._client.post('/v1/image-operations/scan', { body, ...options });
+  }
+
+  /**
    * Creates a task to apply perspective correction (warp) to an image based on
    * detected document boundaries.
    *
@@ -1175,6 +1193,311 @@ export namespace ImageFromTaskResponse {
 }
 
 /**
+ * The response of an scan task
+ */
+export type ScanResponse =
+  | ScanResponse.CompletedScanTaskResponse
+  | ScanResponse.PendingScanTaskResponse
+  | ScanResponse.ProcessingScanTaskResponse
+  | ScanResponse.FailedScanTaskResponse;
+
+export namespace ScanResponse {
+  export interface CompletedScanTaskResponse {
+    /**
+     * The unique identifier for the task.
+     */
+    id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
+
+    /**
+     * The creation date of the task in ISO format.
+     */
+    created_at: string;
+
+    /**
+     * The type of operation being performed by the task.
+     */
+    operation: 'scan';
+
+    parameters: CompletedScanTaskResponse.Parameters;
+
+    result: CompletedScanTaskResponse.Result;
+
+    /**
+     * The current status of the task.
+     */
+    status: 'completed';
+
+    /**
+     * The last update date of the task in ISO format.
+     */
+    updated_at: string;
+  }
+
+  export namespace CompletedScanTaskResponse {
+    export interface Parameters {
+      /**
+       * The effect to apply to the image
+       */
+      effect: 'none' | 'grayscale' | 'scanner' | 'black-background';
+
+      /**
+       * The id of the file or task to operate on.
+       */
+      input: string;
+
+      /**
+       * Mode for detecting documents in the image. Available modes are:
+       *
+       * - **none**: No document detection is performed.
+       * - **standard**: Using a quick algorithm. Document is detected in the image, and
+       *   the image is cropped to the detected document area fixing the perspective to
+       *   match the document's shape.
+       */
+      scan_mode: 'none' | 'standard';
+
+      /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
+
+      /**
+       * The name of the file
+       */
+      name?: string;
+    }
+
+    export interface Result {
+      generated_files: Array<ImageOperationsAPI.ImageFromTaskResponse>;
+    }
+  }
+
+  export interface PendingScanTaskResponse {
+    /**
+     * The unique identifier for the task.
+     */
+    id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
+
+    /**
+     * The creation date of the task in ISO format.
+     */
+    created_at: string;
+
+    /**
+     * The type of operation being performed by the task.
+     */
+    operation: 'scan';
+
+    parameters: PendingScanTaskResponse.Parameters;
+
+    result: unknown;
+
+    /**
+     * The current status of the task.
+     */
+    status: 'pending';
+
+    /**
+     * The last update date of the task in ISO format.
+     */
+    updated_at: string;
+  }
+
+  export namespace PendingScanTaskResponse {
+    export interface Parameters {
+      /**
+       * The effect to apply to the image
+       */
+      effect: 'none' | 'grayscale' | 'scanner' | 'black-background';
+
+      /**
+       * The id of the file or task to operate on.
+       */
+      input: string;
+
+      /**
+       * Mode for detecting documents in the image. Available modes are:
+       *
+       * - **none**: No document detection is performed.
+       * - **standard**: Using a quick algorithm. Document is detected in the image, and
+       *   the image is cropped to the detected document area fixing the perspective to
+       *   match the document's shape.
+       */
+      scan_mode: 'none' | 'standard';
+
+      /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
+
+      /**
+       * The name of the file
+       */
+      name?: string;
+    }
+  }
+
+  export interface ProcessingScanTaskResponse {
+    /**
+     * The unique identifier for the task.
+     */
+    id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
+
+    /**
+     * The creation date of the task in ISO format.
+     */
+    created_at: string;
+
+    /**
+     * The type of operation being performed by the task.
+     */
+    operation: 'scan';
+
+    parameters: ProcessingScanTaskResponse.Parameters;
+
+    result: unknown;
+
+    /**
+     * The current status of the task.
+     */
+    status: 'processing';
+
+    /**
+     * The last update date of the task in ISO format.
+     */
+    updated_at: string;
+  }
+
+  export namespace ProcessingScanTaskResponse {
+    export interface Parameters {
+      /**
+       * The effect to apply to the image
+       */
+      effect: 'none' | 'grayscale' | 'scanner' | 'black-background';
+
+      /**
+       * The id of the file or task to operate on.
+       */
+      input: string;
+
+      /**
+       * Mode for detecting documents in the image. Available modes are:
+       *
+       * - **none**: No document detection is performed.
+       * - **standard**: Using a quick algorithm. Document is detected in the image, and
+       *   the image is cropped to the detected document area fixing the perspective to
+       *   match the document's shape.
+       */
+      scan_mode: 'none' | 'standard';
+
+      /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
+
+      /**
+       * The name of the file
+       */
+      name?: string;
+    }
+  }
+
+  export interface FailedScanTaskResponse {
+    /**
+     * The unique identifier for the task.
+     */
+    id: string;
+
+    /**
+     * The URL to which the task result will be sent upon completion or failure.
+     */
+    callback_url: string | null;
+
+    /**
+     * The creation date of the task in ISO format.
+     */
+    created_at: string;
+
+    /**
+     * The type of operation being performed by the task.
+     */
+    operation: 'scan';
+
+    parameters: FailedScanTaskResponse.Parameters;
+
+    result: FailedScanTaskResponse.Result;
+
+    /**
+     * The current status of the task.
+     */
+    status: 'failed';
+
+    /**
+     * The last update date of the task in ISO format.
+     */
+    updated_at: string;
+  }
+
+  export namespace FailedScanTaskResponse {
+    export interface Parameters {
+      /**
+       * The effect to apply to the image
+       */
+      effect: 'none' | 'grayscale' | 'scanner' | 'black-background';
+
+      /**
+       * The id of the file or task to operate on.
+       */
+      input: string;
+
+      /**
+       * Mode for detecting documents in the image. Available modes are:
+       *
+       * - **none**: No document detection is performed.
+       * - **standard**: Using a quick algorithm. Document is detected in the image, and
+       *   the image is cropped to the detected document area fixing the perspective to
+       *   match the document's shape.
+       */
+      scan_mode: 'none' | 'standard';
+
+      /**
+       * The URL to call when the task is completed or failed. If you want to receive
+       * events, you probably prefer to use `webhooks` instead.
+       */
+      callback_url?: string;
+
+      /**
+       * The name of the file
+       */
+      name?: string;
+    }
+
+    export interface Result {
+      details: { [key: string]: unknown };
+
+      error: string;
+    }
+  }
+}
+
+/**
  * Transform an image by warping it to a quadrilateral.
  */
 export interface WarpRequest {
@@ -1589,6 +1912,39 @@ export declare namespace ImageOperationExtractTextParams {
   }
 }
 
+export interface ImageOperationScanParams {
+  /**
+   * The effect to apply to the image
+   */
+  effect: 'none' | 'grayscale' | 'scanner' | 'black-background';
+
+  /**
+   * The id of the file or task to operate on.
+   */
+  input: string;
+
+  /**
+   * Mode for detecting documents in the image. Available modes are:
+   *
+   * - **none**: No document detection is performed.
+   * - **standard**: Using a quick algorithm. Document is detected in the image, and
+   *   the image is cropped to the detected document area fixing the perspective to
+   *   match the document's shape.
+   */
+  scan_mode: 'none' | 'standard';
+
+  /**
+   * The URL to call when the task is completed or failed. If you want to receive
+   * events, you probably prefer to use `webhooks` instead.
+   */
+  callback_url?: string;
+
+  /**
+   * The name of the file
+   */
+  name?: string;
+}
+
 export interface ImageOperationWarpParams {
   /**
    * The id of the file or task to operate on.
@@ -1623,12 +1979,14 @@ export declare namespace ImageOperations {
     type ExtractTextRequest as ExtractTextRequest,
     type ExtractTextResponse as ExtractTextResponse,
     type ImageFromTaskResponse as ImageFromTaskResponse,
+    type ScanResponse as ScanResponse,
     type WarpRequest as WarpRequest,
     type WarpResponse as WarpResponse,
     type ImageOperationApplyEffectParams as ImageOperationApplyEffectParams,
     type ImageOperationConvertParams as ImageOperationConvertParams,
     type ImageOperationDetectDocumentsParams as ImageOperationDetectDocumentsParams,
     type ImageOperationExtractTextParams as ImageOperationExtractTextParams,
+    type ImageOperationScanParams as ImageOperationScanParams,
     type ImageOperationWarpParams as ImageOperationWarpParams,
   };
 }

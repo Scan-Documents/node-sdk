@@ -1,9 +1,8 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { asTextContentResult } from 'scan-documents-mcp/tools/types';
+import { Metadata, asTextContentResult } from 'scan-documents-mcp/tools/types';
 
 import { Tool } from '@modelcontextprotocol/sdk/types.js';
-import type { Metadata } from '../';
 import ScanDocuments from 'scan-documents';
 
 export const metadata: Metadata = {
@@ -39,6 +38,7 @@ export const tool: Tool = {
               'The URL to call when the task is completed or failed. If you want to receive events, you probably prefer to use `webhooks` instead.',
           },
         },
+        required: ['format', 'input'],
       },
       {
         type: 'object',
@@ -58,6 +58,7 @@ export const tool: Tool = {
               'The URL to call when the task is completed or failed. If you want to receive events, you probably prefer to use `webhooks` instead.',
           },
         },
+        required: ['format', 'input'],
       },
       {
         type: 'object',
@@ -77,6 +78,7 @@ export const tool: Tool = {
               'The URL to call when the task is completed or failed. If you want to receive events, you probably prefer to use `webhooks` instead.',
           },
         },
+        required: ['format', 'input'],
       },
       {
         type: 'object',
@@ -99,6 +101,7 @@ export const tool: Tool = {
               'The URL to call when the task is completed or failed. If you want to receive events, you probably prefer to use `webhooks` instead.',
           },
         },
+        required: ['format', 'input', 'schema'],
       },
     ],
     $defs: {
@@ -112,6 +115,7 @@ export const tool: Tool = {
           },
           example: {
             type: 'object',
+            additionalProperties: true,
           },
           format: {
             type: 'string',
@@ -121,6 +125,7 @@ export const tool: Tool = {
           },
           properties: {
             type: 'object',
+            additionalProperties: true,
           },
           required: {
             type: 'array',
@@ -133,10 +138,10 @@ export const tool: Tool = {
             enum: ['string', 'number', 'integer', 'boolean', 'array', 'object'],
           },
         },
-        required: [],
       },
     },
   },
+  annotations: {},
 };
 
 export const handler = async (client: ScanDocuments, args: Record<string, unknown> | undefined) => {

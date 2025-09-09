@@ -16,6 +16,7 @@ import apply_effect_image_operations from './image-operations/apply-effect-image
 import convert_image_operations from './image-operations/convert-image-operations';
 import detect_documents_image_operations from './image-operations/detect-documents-image-operations';
 import extract_text_image_operations from './image-operations/extract-text-image-operations';
+import scan_image_operations from './image-operations/scan-image-operations';
 import warp_image_operations from './image-operations/warp-image-operations';
 import extract_pages_pdf_operations from './pdf-operations/extract-pages-pdf-operations';
 import merge_pdf_operations from './pdf-operations/merge-pdf-operations';
@@ -40,6 +41,7 @@ addEndpoint(apply_effect_image_operations);
 addEndpoint(convert_image_operations);
 addEndpoint(detect_documents_image_operations);
 addEndpoint(extract_text_image_operations);
+addEndpoint(scan_image_operations);
 addEndpoint(warp_image_operations);
 addEndpoint(extract_pages_pdf_operations);
 addEndpoint(merge_pdf_operations);

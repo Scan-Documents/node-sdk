@@ -126,6 +126,43 @@ over time, you can manually enable or disable certain capabilities:
 --resource=cards,accounts --operation=read --tag=kyc --no-tool=create_cards
 ```
 
+## Running remotely
+
+Launching the client with `--transport=http` launches the server as a remote server using Streamable HTTP transport. The `--port` setting can choose the port it will run on, and the `--socket` setting allows it to run on a Unix socket.
+
+Authorization can be provided via the following headers:
+| Header | Equivalent client option | Security scheme |
+| ----------- | ------------------------ | --------------- |
+| `x-api-key` | `apiKey` | ApiKeyAuth |
+
+A configuration JSON for this server might look like this, assuming the server is hosted at `http://localhost:3000`:
+
+```json
+{
+  "mcpServers": {
+    "scan_documents_api": {
+      "url": "http://localhost:3000",
+      "headers": {
+        "x-api-key": "My API Key"
+      }
+    }
+  }
+}
+```
+
+The command-line arguments for filtering tools and specifying clients can also be used as query parameters in the URL.
+For example, to exclude specific tools while including others, use the URL:
+
+```
+http://localhost:3000?resource=cards&resource=accounts&no_tool=create_cards
+```
+
+Or, to configure for the Cursor client, with a custom max tool name length, use the URL:
+
+```
+http://localhost:3000?client=cursor&capability=tool-name-length%3D40
+```
+
 ## Importing the tools and server individually
 
 ```js
@@ -188,6 +225,8 @@ The following tools are available in this MCP server.
 - `convert_image_operations` (`write`): Creates a task to convert an image file to a different format.
 - `detect_documents_image_operations` (`write`): Creates a task to detect document boundaries within an image.
 - `extract_text_image_operations` (`write`): Creates a task to extract text from a specified image file.
+- `scan_image_operations` (`write`): Creates a task to scan an image file.
+  This is an equivalent operation for `detect-documents` and `warp` combined, additionally it can apply effects to the scanned image.
 - `warp_image_operations` (`write`): Creates a task to apply perspective correction (warp) to an image based on detected document boundaries.
 
 ### Resource `pdf_operations`:
