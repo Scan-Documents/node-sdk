@@ -1,0 +1,42 @@
+{
+  "dxt_version": "0.1",
+  "name": "scan-documents-mcp",
+  "version": "0.1.0-alpha.5",
+  "description": "The official MCP Server for the Scan Documents API",
+  "author": {
+    "name": "Scan Documents",
+    "email": "support@scan-documents.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Scan-Documents/node-sdk.git"
+  },
+  "homepage": "https://github.com/Scan-Documents/node-sdk/tree/main/packages/mcp-server#readme",
+  "documentation": "https://scan-documents.com/docs",
+  "server": {
+    "type": "node",
+    "entry_point": "${__dirname}/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": ["${__dirname}/index.js"],
+      "env": {
+        "SCAN_DOCUMENTS_API_KEY": "${user_config.SCAN_DOCUMENTS_API_KEY}"
+      }
+    }
+  },
+  "user_config": {
+    "SCAN_DOCUMENTS_API_KEY": {
+      "title": "api_key",
+      "description": "API Key for authentication",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "tools_generated": true,
+  "compatibility": {
+    "runtimes": {
+      "node": ">=18.0.0"
+    }
+  },
+  "keywords": ["api"]
+}
