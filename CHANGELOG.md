@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.1.0-alpha.7 (2025-09-12)
+
+Full Changelog: [v0.1.0-alpha.6...v0.1.0-alpha.7](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.6...v0.1.0-alpha.7)
+
+### Bug Fixes
+
+* **mcp:** fix uploading dxt release assets ([44c6989](https://github.com/Scan-Documents/node-sdk/commit/44c69897a845ea52568e968f9b6aa2d133c59454))
+
+
+### Chores
+
+* **mcp:** upload dxt as release asset ([1d5cd4e](https://github.com/Scan-Documents/node-sdk/commit/1d5cd4e0c919b008a9a7515167b721e2b4a35b9d))
+* update SDK settings ([966887d](https://github.com/Scan-Documents/node-sdk/commit/966887d43af747c7bb0c1bd5de0b880379cfe98e))
+
 ## 0.1.0-alpha.6 (2025-08-24)
 
 Full Changelog: [v0.1.0-alpha.5...v0.1.0-alpha.6](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.5...v0.1.0-alpha.6)
