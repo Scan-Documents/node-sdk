@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.8 (2025-09-17)
+
+Full Changelog: [v0.1.0-alpha.7...v0.1.0-alpha.8](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.7...v0.1.0-alpha.8)
+
+### Bug Fixes
+
+* **ci:** set permissions for DXT publish action ([2a49e6e](https://github.com/Scan-Documents/node-sdk/commit/2a49e6eee7c0fe7af1bcc1d1a5f7c482fa993353))
+
 ## 0.1.0-alpha.7 (2025-09-12)
 
 Full Changelog: [v0.1.0-alpha.6...v0.1.0-alpha.7](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.6...v0.1.0-alpha.7)
