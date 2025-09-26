@@ -7,10 +7,9 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "baseUrl": "./",
     "paths": {
-      "scan-documents/*": ["src/*"],
-      "scan-documents": ["src/index.ts"]
+      "scan-documents/*": ["./src/*"],
+      "scan-documents": ["./src/index.ts"]
     },
     "noEmit": true,
 

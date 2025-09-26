@@ -5,8 +5,8 @@
   "compilerOptions": {
     "rootDir": "./dist/src",
     "paths": {
-      "scan-documents-mcp/*": ["dist/src/*"],
-      "scan-documents-mcp": ["dist/src/index.ts"]
+      "scan-documents-mcp/*": ["./dist/src/*"],
+      "scan-documents-mcp": ["./dist/src/index.ts"]
     },
     "noEmit": false,
     "declaration": true,

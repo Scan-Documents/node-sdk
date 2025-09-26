@@ -5,8 +5,8 @@
   "compilerOptions": {
     "rootDir": "./dist/src",
     "paths": {
-      "scan-documents/*": ["dist/src/*"],
-      "scan-documents": ["dist/src/index.ts"]
+      "scan-documents/*": ["./dist/src/*"],
+      "scan-documents": ["./dist/src/index.ts"]
     },
     "noEmit": false,
     "declaration": true,
