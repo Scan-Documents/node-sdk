@@ -1,5 +1,40 @@
 # Changelog
 
+## 0.1.0-alpha.9 (2025-09-30)
+
+Full Changelog: [v0.1.0-alpha.8...v0.1.0-alpha.9](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.8...v0.1.0-alpha.9)
+
+### Features
+
+* **mcp:** add docs search tool ([2b438d8](https://github.com/Scan-Documents/node-sdk/commit/2b438d8c0aff6a847c3a72d1fd503450697e17fe))
+* **mcp:** add option for including docs tools ([6b17cdf](https://github.com/Scan-Documents/node-sdk/commit/6b17cdfc596d73dae04bfb4b655dc25063a5138c))
+* **mcp:** enable experimental docs search tool ([92af2b4](https://github.com/Scan-Documents/node-sdk/commit/92af2b44067a78a12eb9cf165c2529957fc85e15))
+
+
+### Bug Fixes
+
+* **mcp:** fix cli argument parsing logic ([3f11854](https://github.com/Scan-Documents/node-sdk/commit/3f118548223695ca3ddcf0e9c2000cdd3af4ec59))
+* **mcp:** resolve a linting issue in server code ([b037d4c](https://github.com/Scan-Documents/node-sdk/commit/b037d4c101af82fd0605e437da14defdcf380089))
+
+
+### Performance Improvements
+
+* faster formatting ([fac22ce](https://github.com/Scan-Documents/node-sdk/commit/fac22ce18a28fd38e1d1a7e5001b1b75818b5903))
+
+
+### Chores
+
+* **codegen:** internal codegen update ([99b7bf0](https://github.com/Scan-Documents/node-sdk/commit/99b7bf0cee48e90192d0d9bb3826a77cbadd526a))
+* do not install brew dependencies in ./scripts/bootstrap by default ([b0509bd](https://github.com/Scan-Documents/node-sdk/commit/b0509bdcaf9c9d9b69de794f7e70a6dd42a61717))
+* **internal:** codegen related update ([b5d20df](https://github.com/Scan-Documents/node-sdk/commit/b5d20dfff45be575a2758d924ac4a0db0d6627b6))
+* **internal:** fix incremental formatting in some cases ([c3cb905](https://github.com/Scan-Documents/node-sdk/commit/c3cb905ff0c2e58ab177aa34bcee9b51c67ca175))
+* **internal:** gitignore .mcpb files ([37827dd](https://github.com/Scan-Documents/node-sdk/commit/37827dddc199d618f9bd34ee7c7cd2a2b4509614))
+* **internal:** ignore .eslintcache ([2773e24](https://github.com/Scan-Documents/node-sdk/commit/2773e246cdf2b088e5855fcd8cbbf9060900598b))
+* **internal:** remove deprecated `compilerOptions.baseUrl` from tsconfig.json ([f801bc1](https://github.com/Scan-Documents/node-sdk/commit/f801bc1f98775e3439333a42893d7ad9721a7f4d))
+* **mcp:** allow pointing `docs_search` tool at other URLs ([5c09e09](https://github.com/Scan-Documents/node-sdk/commit/5c09e09d060cabe6eba7484e83daad6c69325d2d))
+* **mcp:** rename dxt to mcpb ([59a0d59](https://github.com/Scan-Documents/node-sdk/commit/59a0d5970a12c018b3990bdba2e1fcfcf0da9a18))
+* update lockfile ([9e18897](https://github.com/Scan-Documents/node-sdk/commit/9e18897ee6bd42d1c08224d6f5ea5e5d1e5beabf))
+
 ## 0.1.0-alpha.8 (2025-09-17)
 
 Full Changelog: [v0.1.0-alpha.7...v0.1.0-alpha.8](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.7...v0.1.0-alpha.8)
