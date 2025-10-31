@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.1.0-alpha.10 (2025-10-31)
+
+Full Changelog: [v0.1.0-alpha.9...v0.1.0-alpha.10](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.9...v0.1.0-alpha.10)
+
+### Bug Fixes
+
+* **mcpb:** pin @anthropic-ai/mcpb version ([17d2a07](https://github.com/Scan-Documents/node-sdk/commit/17d2a07dd9eab9dc6c1b83342a711af39dd47b19))
+
+
+### Chores
+
+* extract some types in mcp docs ([4d902c6](https://github.com/Scan-Documents/node-sdk/commit/4d902c6b9a2f5aaebbdf6f177e9f25e5a8d7ee5e))
+* **internal:** remove .eslintcache ([cfd1981](https://github.com/Scan-Documents/node-sdk/commit/cfd19817afb1a29d92cc8e7166ee1fbd44cca0e1))
+* **internal:** use npm pack for build uploads ([ee6f233](https://github.com/Scan-Documents/node-sdk/commit/ee6f2338b80c359dd1299b5d7e4cb8cb507faa53))
+* **jsdoc:** fix [@link](https://github.com/link) annotations to refer only to parts of the package‘s public interface ([d59f9b4](https://github.com/Scan-Documents/node-sdk/commit/d59f9b417acd0fbcd6852c968d8fc641a1992e1b))
+
 ## 0.1.0-alpha.9 (2025-09-30)
 
 Full Changelog: [v0.1.0-alpha.8...v0.1.0-alpha.9](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.8...v0.1.0-alpha.9)
