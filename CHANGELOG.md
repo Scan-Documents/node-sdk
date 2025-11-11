@@ -1,5 +1,36 @@
 # Changelog
 
+## 0.1.0-alpha.11 (2025-11-11)
+
+Full Changelog: [v0.1.0-alpha.10...v0.1.0-alpha.11](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.10...v0.1.0-alpha.11)
+
+### Features
+
+* **mcp:** enable optional code execution tool on http mcp servers ([4c23596](https://github.com/Scan-Documents/node-sdk/commit/4c23596a29933630c2df756da4aa18ec4838c390))
+
+
+### Bug Fixes
+
+* **mcp:** use raw responses for binary content ([f45a147](https://github.com/Scan-Documents/node-sdk/commit/f45a1471b481c933dd58a9e760031a80b3169887))
+
+
+### Chores
+
+* **internal:** codegen related update ([06f7863](https://github.com/Scan-Documents/node-sdk/commit/06f786303bbee758128c347b3acac98a374afa73))
+* **internal:** codegen related update ([5333a8c](https://github.com/Scan-Documents/node-sdk/commit/5333a8c74a6850431d5aa7ad21de3275e92cbe2c))
+* **internal:** grammar fix (it's -&gt; its) ([fac2c0b](https://github.com/Scan-Documents/node-sdk/commit/fac2c0b505bbf75f0390b74958f5a7d12bfce97d))
+* mcp code tool explicit error message when missing a run function ([b5803df](https://github.com/Scan-Documents/node-sdk/commit/b5803dfdb9e2af3358508bffc7ea3535065f0f54))
+* **mcp:** add friendlier MCP code tool errors on incorrect method invocations ([1ad3bf4](https://github.com/Scan-Documents/node-sdk/commit/1ad3bf4cf1255c7ea14efa06ccae89783f3cc140))
+* **mcp:** add line numbers to code tool errors ([ec9aa52](https://github.com/Scan-Documents/node-sdk/commit/ec9aa52d998fd72b8645fe004f4ba497015ce940))
+* **mcp:** clarify http auth error ([bae66db](https://github.com/Scan-Documents/node-sdk/commit/bae66db1aa5ac8b0427eb4806a5805a9c2d0e788))
+* use structured error when code execution tool errors ([7f7be2a](https://github.com/Scan-Documents/node-sdk/commit/7f7be2a424315751762dc60dd333bdd97068c967))
+
+
+### Documentation
+
+* **mcp:** add a README button for one-click add to Cursor ([0df21fe](https://github.com/Scan-Documents/node-sdk/commit/0df21fe29f14ac757e3027ad045d22f1a388b046))
+* **mcp:** add a README link to add server to VS Code or Claude Code ([3328ea0](https://github.com/Scan-Documents/node-sdk/commit/3328ea0d34e6519970505d8ac791baf0fd7cef59))
+
 ## 0.1.0-alpha.10 (2025-10-31)
 
 Full Changelog: [v0.1.0-alpha.9...v0.1.0-alpha.10](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.9...v0.1.0-alpha.10)
