@@ -33,7 +33,7 @@ export const tool: Tool = {
 
 export const handler = async (client: ScanDocuments, args: Record<string, unknown> | undefined) => {
   const { id, ...body } = args as any;
-  return asBinaryContentResult(await client.files.download(id));
+  return asBinaryContentResult(await client.files.download(id).asResponse());
 };
 
 export default { metadata, tool, handler };
