@@ -34,7 +34,7 @@ export const newMcpServer = () =>
   new McpServer(
     {
       name: 'scan_documents_api',
-      version: '0.1.0-alpha.10',
+      version: '0.1.0-alpha.11',
     },
     { capabilities: { tools: {}, logging: {} } },
   );
