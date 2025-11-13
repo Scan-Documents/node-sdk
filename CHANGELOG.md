@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.12 (2025-11-13)
+
+Full Changelog: [v0.1.0-alpha.11...v0.1.0-alpha.12](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.11...v0.1.0-alpha.12)
+
+### Bug Fixes
+
+* **mcp:** return tool execution error on jq failure ([c4c60b8](https://github.com/Scan-Documents/node-sdk/commit/c4c60b8a4a393dc77c03e5c91476c95f36eeca7e))
+
 ## 0.1.0-alpha.11 (2025-11-11)
 
 Full Changelog: [v0.1.0-alpha.10...v0.1.0-alpha.11](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.10...v0.1.0-alpha.11)
