@@ -1,5 +1,24 @@
 # Changelog
 
+## 0.1.0-alpha.13 (2025-12-02)
+
+Full Changelog: [v0.1.0-alpha.12...v0.1.0-alpha.13](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.12...v0.1.0-alpha.13)
+
+### Features
+
+* **mcp:** add detail field to docs search tool ([50f1c1b](https://github.com/Scan-Documents/node-sdk/commit/50f1c1badddfcb6bfdb07fccf0257c38c597f718))
+
+
+### Bug Fixes
+
+* **mcp:** return tool execution error on api error ([0b1293d](https://github.com/Scan-Documents/node-sdk/commit/0b1293daf58e201db811aa804709954452e417ff))
+
+
+### Chores
+
+* **client:** fix logger property type ([d2451fa](https://github.com/Scan-Documents/node-sdk/commit/d2451fa8cdd5d90c061a51333dcc0ae594d7092b))
+* **mcp:** upgrade jq-web ([a587451](https://github.com/Scan-Documents/node-sdk/commit/a58745186e4c6278d765ec7d7688edd6b406fd7b))
+
 ## 0.1.0-alpha.12 (2025-11-13)
 
 Full Changelog: [v0.1.0-alpha.11...v0.1.0-alpha.12](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.11...v0.1.0-alpha.12)
