@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { Metadata, asTextContentResult } from 'scan-documents-mcp/tools/types';
+import { Metadata, asErrorResult, asTextContentResult } from 'scan-documents-mcp/tools/types';
 
 import { Tool } from '@modelcontextprotocol/sdk/types.js';
 import ScanDocuments from 'scan-documents';
@@ -46,7 +46,14 @@ export const tool: Tool = {
 
 export const handler = async (client: ScanDocuments, args: Record<string, unknown> | undefined) => {
   const body = args as any;
-  return asTextContentResult(await client.imageOperations.applyEffect(body));
+  try {
+    return asTextContentResult(await client.imageOperations.applyEffect(body));
+  } catch (error) {
+    if (error instanceof ScanDocuments.APIError) {
+      return asErrorResult(error.message);
+    }
+    throw error;
+  }
 };
 
 export default { metadata, tool, handler };
