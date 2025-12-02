@@ -44,7 +44,7 @@ export const handler = async (client: ScanDocuments, args: Record<string, unknow
   try {
     return asTextContentResult(await maybeFilter(jq_filter, await client.files.retrieve(id)));
   } catch (error) {
-    if (isJqError(error)) {
+    if (error instanceof ScanDocuments.APIError || isJqError(error)) {
       return asErrorResult(error.message);
     }
     throw error;
