@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.15 (2025-12-06)
+
+Full Changelog: [v0.1.0-alpha.14...v0.1.0-alpha.15](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.14...v0.1.0-alpha.15)
+
+### Bug Fixes
+
+* **mcp:** correct code tool API endpoint ([5003e04](https://github.com/Scan-Documents/node-sdk/commit/5003e0415efa882aced42e979dfd429c9daaf402))
+
 ## 0.1.0-alpha.14 (2025-12-06)
 
 Full Changelog: [v0.1.0-alpha.13...v0.1.0-alpha.14](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.13...v0.1.0-alpha.14)
