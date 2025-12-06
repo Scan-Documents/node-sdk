@@ -1,5 +1,27 @@
 # Changelog
 
+## 0.1.0-alpha.14 (2025-12-06)
+
+Full Changelog: [v0.1.0-alpha.13...v0.1.0-alpha.14](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.13...v0.1.0-alpha.14)
+
+### Features
+
+* **mcp:** add typescript check to code execution tool ([787b9fb](https://github.com/Scan-Documents/node-sdk/commit/787b9fb7175b348c6c56775387b51f7853490190))
+* **mcp:** handle code mode calls in the Stainless API ([151c4a6](https://github.com/Scan-Documents/node-sdk/commit/151c4a630686fb463b6682ae2feeee4288eecca8))
+* **mcp:** return logs on code tool errors ([118be8d](https://github.com/Scan-Documents/node-sdk/commit/118be8d38ea7a1addca56aa0b2e265bf889cc3ed))
+
+
+### Bug Fixes
+
+* **mcp:** return correct lines on typescript errors ([d2cada6](https://github.com/Scan-Documents/node-sdk/commit/d2cada637e8c9d527019c1e47878abe0c510f1ca))
+
+
+### Chores
+
+* **internal:** codegen related update ([3012c02](https://github.com/Scan-Documents/node-sdk/commit/3012c02f18b0cd421a705621427e84a018e54287))
+* **internal:** upgrade eslint ([86bb2ea](https://github.com/Scan-Documents/node-sdk/commit/86bb2eacb9c20cee034b3da07c08d36be87d06fd))
+* use latest @modelcontextprotocol/sdk ([f8b887f](https://github.com/Scan-Documents/node-sdk/commit/f8b887f81238a27d8b0f352201ebc7bf38fa2cf2))
+
 ## 0.1.0-alpha.13 (2025-12-02)
 
 Full Changelog: [v0.1.0-alpha.12...v0.1.0-alpha.13](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.12...v0.1.0-alpha.13)
