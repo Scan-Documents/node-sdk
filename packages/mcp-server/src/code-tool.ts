@@ -35,7 +35,10 @@ export async function codeTool() {
       headers: {
         ...(stainlessAPIKey && { Authorization: stainlessAPIKey }),
         'Content-Type': 'application/json',
-        client_envs: JSON.stringify({ SCAN_DOCUMENTS_API_KEY: readEnv('SCAN_DOCUMENTS_API_KEY') }),
+        client_envs: JSON.stringify({
+          SCAN_DOCUMENTS_API_KEY: readEnv('SCAN_DOCUMENTS_API_KEY'),
+          SCAN_DOCUMENTS_BASE_URL: readEnv('SCAN_DOCUMENTS_BASE_URL'),
+        }),
       },
       body: JSON.stringify({
         project_name: 'scan-documents',
