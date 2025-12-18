@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.1.0-alpha.16 (2025-12-18)
+
+Full Changelog: [v0.1.0-alpha.15...v0.1.0-alpha.16](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.15...v0.1.0-alpha.16)
+
+### Bug Fixes
+
+* **mcp:** add client instantiation options to code tool ([c007cb1](https://github.com/Scan-Documents/node-sdk/commit/c007cb1ddaf61570108c2e6ef4230865fc79b74b))
+* **mcp:** pass base url to code tool ([f265822](https://github.com/Scan-Documents/node-sdk/commit/f2658223f23bfa15723abb1ff42d062ab23756d6))
+
+
+### Chores
+
+* **internal:** codegen related update ([4e12321](https://github.com/Scan-Documents/node-sdk/commit/4e12321fafc288242a2e1eab3e0185b7286f793c))
+* **mcp:** update lockfile ([7919465](https://github.com/Scan-Documents/node-sdk/commit/79194651a386483c00ec2f7ebb9a12cda3fd8c94))
+
 ## 0.1.0-alpha.15 (2025-12-06)
 
 Full Changelog: [v0.1.0-alpha.14...v0.1.0-alpha.15](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.14...v0.1.0-alpha.15)
