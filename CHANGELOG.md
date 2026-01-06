@@ -1,5 +1,29 @@
 # Changelog
 
+## 0.1.0-alpha.17 (2026-01-06)
+
+Full Changelog: [v0.1.0-alpha.16...v0.1.0-alpha.17](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.16...v0.1.0-alpha.17)
+
+### ⚠ BREAKING CHANGES
+
+* **mcp:** remove deprecated tool schemes
+* **mcp:** **Migration:** To migrate, simply modify the command used to invoke the MCP server. Currently, the only supported tool scheme is code mode. Now, starting the server with just `node /path/to/mcp/server` or `npx package-name` will invoke code tools: changing your command to one of these is likely all you will need to do.
+
+### Bug Fixes
+
+* **mcp:** correct code tool api output types ([5b24467](https://github.com/Scan-Documents/node-sdk/commit/5b24467a6ff8b924a4dd94a833c0e972eb8a07db))
+
+
+### Chores
+
+* **internal:** codegen related update ([9126131](https://github.com/Scan-Documents/node-sdk/commit/9126131d06457c843109fd0967430b5101b2e8ff))
+* **mcp:** remove deprecated tool schemes ([49f084c](https://github.com/Scan-Documents/node-sdk/commit/49f084c05786fa386b8da397fce4aa20c92c473f))
+
+
+### Documentation
+
+* prominently feature MCP server setup in root SDK readmes ([8e89817](https://github.com/Scan-Documents/node-sdk/commit/8e898172af49f292ea7cbad4b674ff4fbc6975cd))
+
 ## 0.1.0-alpha.16 (2025-12-18)
 
 Full Changelog: [v0.1.0-alpha.15...v0.1.0-alpha.16](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.15...v0.1.0-alpha.16)
