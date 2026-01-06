@@ -54,7 +54,7 @@ If you use Claude Code, you can install the MCP server by running the command be
 environment variables in Claude Code's `.claude.json`, which can be found in your home directory.
 
 ```
-claude mcp add --transport stdio scan_documents_api --env SCAN_DOCUMENTS_API_KEY="Your SCAN_DOCUMENTS_API_KEY here." -- npx -y scan-documents-mcp
+claude mcp add scan_documents_mcp_api --env SCAN_DOCUMENTS_API_KEY="Your SCAN_DOCUMENTS_API_KEY here." -- npx -y scan-documents-mcp
 ```
 
 ## Code Mode
