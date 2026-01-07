@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-alpha.18 (2026-01-07)
+
+Full Changelog: [v0.1.0-alpha.17...v0.1.0-alpha.18](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.17...v0.1.0-alpha.18)
+
+### Bug Fixes
+
+* **mcp:** fix options parsing ([950cadd](https://github.com/Scan-Documents/node-sdk/commit/950caddd288b4cf8f3d9b62248adfacb0a5ec86d))
+
+
+### Chores
+
+* break long lines in snippets into multiline ([69ff5c6](https://github.com/Scan-Documents/node-sdk/commit/69ff5c6d4226f137b8d796c338600f353e9c34ed))
+
 ## 0.1.0-alpha.17 (2026-01-06)
 
 Full Changelog: [v0.1.0-alpha.16...v0.1.0-alpha.17](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.16...v0.1.0-alpha.17)
