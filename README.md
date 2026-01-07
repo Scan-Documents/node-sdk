@@ -35,7 +35,10 @@ const client = new ScanDocuments({
   apiKey: process.env['SCAN_DOCUMENTS_API_KEY'], // This is the default and can be omitted
 });
 
-const file = await client.files.upload({ file: fs.createReadStream('path/to/file'), name: 'REPLACE_ME' });
+const file = await client.files.upload({
+  file: fs.createReadStream('path/to/file'),
+  name: 'REPLACE_ME',
+});
 ```
 
 ### Request & Response types
@@ -84,8 +87,14 @@ await client.files.upload({ file: new File(['my bytes'], 'file'), name: 'File Na
 await client.files.upload({ file: await fetch('https://somesite/file'), name: 'File Name' });
 
 // Finally, if none of the above are convenient, you can use our `toFile` helper:
-await client.files.upload({ file: await toFile(Buffer.from('my bytes'), 'file'), name: 'File Name' });
-await client.files.upload({ file: await toFile(new Uint8Array([0, 1, 2]), 'file'), name: 'File Name' });
+await client.files.upload({
+  file: await toFile(Buffer.from('my bytes'), 'file'),
+  name: 'File Name',
+});
+await client.files.upload({
+  file: await toFile(new Uint8Array([0, 1, 2]), 'file'),
+  name: 'File Name',
+});
 ```
 
 ## Handling errors
