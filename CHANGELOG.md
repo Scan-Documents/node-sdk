@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.19 (2026-01-08)
+
+Full Changelog: [v0.1.0-alpha.18...v0.1.0-alpha.19](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.18...v0.1.0-alpha.19)
+
+### Bug Fixes
+
+* **mcp:** fix env parsing ([f94499f](https://github.com/Scan-Documents/node-sdk/commit/f94499f79fc551ce5e822a4e04bee8d0f7eb455f))
+
 ## 0.1.0-alpha.18 (2026-01-07)
 
 Full Changelog: [v0.1.0-alpha.17...v0.1.0-alpha.18](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.17...v0.1.0-alpha.18)
