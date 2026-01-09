@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.20 (2026-01-09)
+
+Full Changelog: [v0.1.0-alpha.19...v0.1.0-alpha.20](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.19...v0.1.0-alpha.20)
+
+### Bug Fixes
+
+* **mcp:** update code tool prompt ([008c333](https://github.com/Scan-Documents/node-sdk/commit/008c333df360441c300d039d0f8d7c71697d2f4e))
+
 ## 0.1.0-alpha.19 (2026-01-08)
 
 Full Changelog: [v0.1.0-alpha.18...v0.1.0-alpha.19](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.18...v0.1.0-alpha.19)
