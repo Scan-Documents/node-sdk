@@ -4,6 +4,7 @@ import { McpTool, Metadata, ToolCallResult, asErrorResult, asTextContentResult }
 import { Tool } from '@modelcontextprotocol/sdk/types.js';
 import { readEnv, readEnvOrError } from './server';
 import { WorkerInput, WorkerOutput } from './code-tool-types';
+import { ScanDocuments } from 'scan-documents';
 
 const prompt = `Runs JavaScript code to interact with the Scan Documents API.
 
@@ -52,7 +53,7 @@ export function codeTool(): McpTool {
       required: ['code'],
     },
   };
-  const handler = async (_: unknown, args: any): Promise<ToolCallResult> => {
+  const handler = async (client: ScanDocuments, args: any): Promise<ToolCallResult> => {
     const code = args.code as string;
     const intent = args.intent as string | undefined;
 
@@ -68,8 +69,8 @@ export function codeTool(): McpTool {
         ...(stainlessAPIKey && { Authorization: stainlessAPIKey }),
         'Content-Type': 'application/json',
         client_envs: JSON.stringify({
-          SCAN_DOCUMENTS_API_KEY: readEnvOrError('SCAN_DOCUMENTS_API_KEY'),
-          SCAN_DOCUMENTS_BASE_URL: readEnv('SCAN_DOCUMENTS_BASE_URL'),
+          SCAN_DOCUMENTS_API_KEY: readEnvOrError('SCAN_DOCUMENTS_API_KEY') ?? client.apiKey ?? undefined,
+          SCAN_DOCUMENTS_BASE_URL: readEnv('SCAN_DOCUMENTS_BASE_URL') ?? client.baseURL ?? undefined,
         }),
       },
       body: JSON.stringify({
