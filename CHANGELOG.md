@@ -1,5 +1,29 @@
 # Changelog
 
+## 0.1.0-alpha.21 (2026-01-28)
+
+Full Changelog: [v0.1.0-alpha.20...v0.1.0-alpha.21](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.20...v0.1.0-alpha.21)
+
+### Bug Fixes
+
+* **mcp:** allow falling back for required env variables ([2064f7e](https://github.com/Scan-Documents/node-sdk/commit/2064f7e9b61182f6f79d93058ce630946eada549))
+
+
+### Chores
+
+* **ci:** upgrade `actions/github-script` ([10018db](https://github.com/Scan-Documents/node-sdk/commit/10018db8f13528d2045350700bc149085577b720))
+* **internal:** codegen related update ([500552c](https://github.com/Scan-Documents/node-sdk/commit/500552c55bb03202c62aad8bec38291064c81e88))
+* **internal:** codegen related update ([135b7ac](https://github.com/Scan-Documents/node-sdk/commit/135b7ac138ba6af646acd821b6099ce35d586405))
+* **internal:** codegen related update ([3d1bcfe](https://github.com/Scan-Documents/node-sdk/commit/3d1bcfea16b294cca973e0106497edd055a7ccde))
+* **internal:** codegen related update ([f14af8b](https://github.com/Scan-Documents/node-sdk/commit/f14af8b7adc486b0c190eaa26b94a3dd9eb768d7))
+* **internal:** codegen related update ([37aa64d](https://github.com/Scan-Documents/node-sdk/commit/37aa64d77c5596809ed2b0f6fd08e6b28c84ed9a))
+* **internal:** update `actions/checkout` version ([34bd64b](https://github.com/Scan-Documents/node-sdk/commit/34bd64b80c7bede712ffbebbcb200618c3ea2f9b))
+* **internal:** update lock file ([d9dc3c8](https://github.com/Scan-Documents/node-sdk/commit/d9dc3c8eef1111ca37a21f49cd640b94e6b3957d))
+* **internal:** upgrade babel, qs, js-yaml ([82aebc4](https://github.com/Scan-Documents/node-sdk/commit/82aebc49211d3b3e62d5f914af34b4555b674fc9))
+* **mcp:** add intent param to execute tool ([f6f24a3](https://github.com/Scan-Documents/node-sdk/commit/f6f24a35d524ad1c4ce1c36e84ba12bb981ac0f0))
+* **mcp:** pass intent param to execute handler ([acb4a88](https://github.com/Scan-Documents/node-sdk/commit/acb4a883840651babdff9765b18b167cc16c91e0))
+* **mcp:** upgrade dependencies ([3a8fad6](https://github.com/Scan-Documents/node-sdk/commit/3a8fad686828d8956ed1d943854db9afd17d5095))
+
 ## 0.1.0-alpha.20 (2026-01-09)
 
 Full Changelog: [v0.1.0-alpha.19...v0.1.0-alpha.20](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.19...v0.1.0-alpha.20)
