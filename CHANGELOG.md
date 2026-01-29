@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.22 (2026-01-29)
+
+Full Changelog: [v0.1.0-alpha.21...v0.1.0-alpha.22](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.21...v0.1.0-alpha.22)
+
+### Bug Fixes
+
+* **docs:** fix mcp installation instructions for remote servers ([d4ffbbd](https://github.com/Scan-Documents/node-sdk/commit/d4ffbbd7530b6c8243b7f4b4873811bf1c8eb6a4))
+
 ## 0.1.0-alpha.21 (2026-01-28)
 
 Full Changelog: [v0.1.0-alpha.20...v0.1.0-alpha.21](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.20...v0.1.0-alpha.21)
