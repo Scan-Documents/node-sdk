@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-alpha.23 (2026-02-03)
+
+Full Changelog: [v0.1.0-alpha.22...v0.1.0-alpha.23](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.22...v0.1.0-alpha.23)
+
+### Bug Fixes
+
+* **client:** avoid memory leak with abort signals ([8270f0d](https://github.com/Scan-Documents/node-sdk/commit/8270f0d224ff8d6c3b396e994a9af0c0e4278ebd))
+
+
+### Chores
+
+* **mcp:** up tsconfig lib version to es2022 ([dbfab5b](https://github.com/Scan-Documents/node-sdk/commit/dbfab5b030098d589a9e93c81e0031dc82add4a5))
+
 ## 0.1.0-alpha.22 (2026-01-29)
 
 Full Changelog: [v0.1.0-alpha.21...v0.1.0-alpha.22](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.21...v0.1.0-alpha.22)
