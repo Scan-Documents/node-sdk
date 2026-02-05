@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.1.0-alpha.24 (2026-02-05)
+
+Full Changelog: [v0.1.0-alpha.23...v0.1.0-alpha.24](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.23...v0.1.0-alpha.24)
+
+### Features
+
+* **mcp:** add initial server instructions ([545558c](https://github.com/Scan-Documents/node-sdk/commit/545558ca367fe51539cc04cc1bac5f49c531ae05))
+
+
+### Chores
+
+* **client:** do not parse responses with empty content-length ([1389823](https://github.com/Scan-Documents/node-sdk/commit/13898230806689632adc8f9fa1d6e825fbade837))
+* **client:** restructure abort controller binding ([e4ce7a1](https://github.com/Scan-Documents/node-sdk/commit/e4ce7a161f0a5dc78ac1e553651d9869a671c16b))
+* **internal:** refactor flag parsing for MCP servers and add debug flag ([d014b64](https://github.com/Scan-Documents/node-sdk/commit/d014b645e45683609ef7d82561126cff1ca2bfe3))
+* **internal:** support oauth authorization code flow for MCP servers ([ce96b0c](https://github.com/Scan-Documents/node-sdk/commit/ce96b0c6cdee3c08414ccbe9d7eda138802e1e49))
+
 ## 0.1.0-alpha.23 (2026-02-03)
 
 Full Changelog: [v0.1.0-alpha.22...v0.1.0-alpha.23](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.22...v0.1.0-alpha.23)
