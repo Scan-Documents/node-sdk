@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.25 (2026-02-06)
+
+Full Changelog: [v0.1.0-alpha.24...v0.1.0-alpha.25](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.24...v0.1.0-alpha.25)
+
+### Bug Fixes
+
+* **client:** avoid removing abort listener too early ([5518528](https://github.com/Scan-Documents/node-sdk/commit/55185283d6dcd1a3944ee65687ef9c5a00567956))
+
 ## 0.1.0-alpha.24 (2026-02-05)
 
 Full Changelog: [v0.1.0-alpha.23...v0.1.0-alpha.24](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.23...v0.1.0-alpha.24)
