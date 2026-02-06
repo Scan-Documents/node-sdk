@@ -57,7 +57,7 @@ export const newMcpServer = async () =>
   new McpServer(
     {
       name: 'scan_documents_api',
-      version: '0.1.0-alpha.24',
+      version: '0.1.0-alpha.25',
     },
     {
       instructions: await getInstructions(),
