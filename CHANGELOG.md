@@ -1,5 +1,26 @@
 # Changelog
 
+## 0.1.0-alpha.26 (2026-02-20)
+
+Full Changelog: [v0.1.0-alpha.25...v0.1.0-alpha.26](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.25...v0.1.0-alpha.26)
+
+### Bug Fixes
+
+* **mcp:** initialize SDK lazily to avoid failing the connection on init errors ([31216c9](https://github.com/Scan-Documents/node-sdk/commit/31216c9ecc5f1c5c93be18bba412434e52ca1436))
+
+
+### Chores
+
+* **internal/client:** fix form-urlencoded requests ([ef09701](https://github.com/Scan-Documents/node-sdk/commit/ef09701d91d9053eb38867038e1f5ca8920d2311))
+* **internal:** add health check to MCP server when running in HTTP mode ([26bf884](https://github.com/Scan-Documents/node-sdk/commit/26bf884a9c1266ba85bb0ba8d6a1c869a3118c21))
+* **internal:** allow basic filtering of methods allowed for MCP code mode ([ba76545](https://github.com/Scan-Documents/node-sdk/commit/ba76545b0fe120e1a1f0b440535a0e2eb3c4c8bc))
+* **internal:** allow setting x-stainless-api-key header on mcp server requests ([ae7615e](https://github.com/Scan-Documents/node-sdk/commit/ae7615e4bd12019216d8c31e4b41151e97904822))
+* **internal:** always generate MCP server dockerfiles and upgrade associated dependencies ([39f408d](https://github.com/Scan-Documents/node-sdk/commit/39f408dd83c3d4fe6072b752e1b8b77f1a947ce5))
+* **internal:** avoid type checking errors with ts-reset ([ce842a2](https://github.com/Scan-Documents/node-sdk/commit/ce842a2cb07db7a37d48e67f247d9125e7b1c57a))
+* **internal:** cache fetch instruction calls in MCP server ([b190601](https://github.com/Scan-Documents/node-sdk/commit/b1906016a3cbc47f8df082bcee8a15cc67e2b603))
+* **internal:** improve layout of generated MCP server files ([cc9d57d](https://github.com/Scan-Documents/node-sdk/commit/cc9d57d4970686cb404382f9ebe67b89085e131d))
+* **mcp:** forward STAINLESS_API_KEY to docs search endpoint ([7e3fddb](https://github.com/Scan-Documents/node-sdk/commit/7e3fddb693b3a680d0367bf546fa4bf869de0878))
+
 ## 0.1.0-alpha.25 (2026-02-06)
 
 Full Changelog: [v0.1.0-alpha.24...v0.1.0-alpha.25](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.24...v0.1.0-alpha.25)
