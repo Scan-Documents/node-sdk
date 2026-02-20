@@ -8,7 +8,7 @@ const client = new ScanDocuments({
 });
 
 describe('resource imageOperations', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('applyEffect: only required params', async () => {
     const responsePromise = client.imageOperations.applyEffect({
       effect: 'grayscale',
@@ -23,7 +23,7 @@ describe('resource imageOperations', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('applyEffect: required and optional params', async () => {
     const response = await client.imageOperations.applyEffect({
       effect: 'grayscale',
@@ -33,7 +33,7 @@ describe('resource imageOperations', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('convert: only required params', async () => {
     const responsePromise = client.imageOperations.convert({
       input: 'file_avyrvozb9302uwhq',
@@ -48,7 +48,7 @@ describe('resource imageOperations', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('convert: required and optional params', async () => {
     const response = await client.imageOperations.convert({
       input: 'file_avyrvozb9302uwhq',
@@ -58,7 +58,7 @@ describe('resource imageOperations', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('detectDocuments: only required params', async () => {
     const responsePromise = client.imageOperations.detectDocuments({ input: 'file_avyrvozb9302uwhq' });
     const rawResponse = await responsePromise.asResponse();
@@ -70,7 +70,7 @@ describe('resource imageOperations', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('detectDocuments: required and optional params', async () => {
     const response = await client.imageOperations.detectDocuments({
       input: 'file_avyrvozb9302uwhq',
@@ -78,7 +78,7 @@ describe('resource imageOperations', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('extractText: only required params', async () => {
     const responsePromise = client.imageOperations.extractText({
       format: 'plain',
@@ -93,7 +93,7 @@ describe('resource imageOperations', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('extractText: required and optional params', async () => {
     const response = await client.imageOperations.extractText({
       format: 'plain',
@@ -102,7 +102,7 @@ describe('resource imageOperations', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('scan: only required params', async () => {
     const responsePromise = client.imageOperations.scan({
       effect: 'none',
@@ -118,7 +118,7 @@ describe('resource imageOperations', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('scan: required and optional params', async () => {
     const response = await client.imageOperations.scan({
       effect: 'none',
@@ -129,7 +129,7 @@ describe('resource imageOperations', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('warp: only required params', async () => {
     const responsePromise = client.imageOperations.warp({
       input: 'file_avyrvozb9302uwhq',
@@ -149,7 +149,7 @@ describe('resource imageOperations', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('warp: required and optional params', async () => {
     const response = await client.imageOperations.warp({
       input: 'file_avyrvozb9302uwhq',

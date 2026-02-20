@@ -8,7 +8,7 @@ const client = new ScanDocuments({
 });
 
 describe('resource pdfOperations', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('extractPages: only required params', async () => {
     const responsePromise = client.pdfOperations.extractPages({
       input: 'file_avyrvozb9302uwhq',
@@ -23,7 +23,7 @@ describe('resource pdfOperations', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('extractPages: required and optional params', async () => {
     const response = await client.pdfOperations.extractPages({
       input: 'file_avyrvozb9302uwhq',
@@ -33,7 +33,7 @@ describe('resource pdfOperations', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('merge: only required params', async () => {
     const responsePromise = client.pdfOperations.merge({ input: ['file_avyrvozb9302uwhq'] });
     const rawResponse = await responsePromise.asResponse();
@@ -45,7 +45,7 @@ describe('resource pdfOperations', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('merge: required and optional params', async () => {
     const response = await client.pdfOperations.merge({
       input: ['file_avyrvozb9302uwhq'],
@@ -54,7 +54,7 @@ describe('resource pdfOperations', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('render: only required params', async () => {
     const responsePromise = client.pdfOperations.render({ input: 'file_avyrvozb9302uwhq' });
     const rawResponse = await responsePromise.asResponse();
@@ -66,7 +66,7 @@ describe('resource pdfOperations', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('render: required and optional params', async () => {
     const response = await client.pdfOperations.render({
       input: 'file_avyrvozb9302uwhq',
@@ -77,7 +77,7 @@ describe('resource pdfOperations', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('split: only required params', async () => {
     const responsePromise = client.pdfOperations.split({ input: 'file_avyrvozb9302uwhq' });
     const rawResponse = await responsePromise.asResponse();
@@ -89,7 +89,7 @@ describe('resource pdfOperations', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('split: required and optional params', async () => {
     const response = await client.pdfOperations.split({
       input: 'file_avyrvozb9302uwhq',
