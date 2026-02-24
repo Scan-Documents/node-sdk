@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.1.0-alpha.27 (2026-02-24)
+
+Full Changelog: [v0.1.0-alpha.26...v0.1.0-alpha.27](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.26...v0.1.0-alpha.27)
+
+### Bug Fixes
+
+* **docs/contributing:** correct pnpm link command ([22a40f6](https://github.com/Scan-Documents/node-sdk/commit/22a40f6d1b1c7013d4c8ef7ebe75e4b9311c3dd9))
+
+
+### Chores
+
+* **internal:** remove mock server code ([ba40172](https://github.com/Scan-Documents/node-sdk/commit/ba40172e70c700b7f655a6ea5c4e080850edb622))
+* **mcp:** correctly update version in sync with sdk ([9fa85a0](https://github.com/Scan-Documents/node-sdk/commit/9fa85a036dc92960188e5c730deab1abb4c05a0d))
+* update mock server docs ([6e37ffa](https://github.com/Scan-Documents/node-sdk/commit/6e37ffa38709b41df6c5e089325eb6a367fc155f))
+
 ## 0.1.0-alpha.26 (2026-02-20)
 
 Full Changelog: [v0.1.0-alpha.25...v0.1.0-alpha.26](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.25...v0.1.0-alpha.26)
