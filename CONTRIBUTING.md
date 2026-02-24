@@ -60,7 +60,7 @@ $ yarn link scan-documents
 # With pnpm
 $ pnpm link --global
 $ cd ../my-package
-$ pnpm link -—global scan-documents
+$ pnpm link --global scan-documents
 ```
 
 ## Running tests
