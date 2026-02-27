@@ -20,7 +20,7 @@ export const newMcpServer = async (stainlessApiKey: string | undefined) =>
   new McpServer(
     {
       name: 'scan_documents_api',
-      version: '0.1.0-alpha.27',
+      version: '0.1.0-alpha.28',
     },
     {
       instructions: await getInstructions(stainlessApiKey),
