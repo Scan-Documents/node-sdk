@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.1.0-alpha.28 (2026-02-27)
+
+Full Changelog: [v0.1.0-alpha.27...v0.1.0-alpha.28](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.27...v0.1.0-alpha.28)
+
+### Features
+
+* **mcp:** add an option to disable code tool ([da647e2](https://github.com/Scan-Documents/node-sdk/commit/da647e2d55b35d55460133d6787eef4f28d896ef))
+
+
+### Chores
+
+* **internal:** fix MCP Dockerfiles so they can be built without buildkit ([e1a34c1](https://github.com/Scan-Documents/node-sdk/commit/e1a34c1c73ba4bf2cd8aed8e96e857c194fedc9a))
+* **internal:** fix MCP Dockerfiles so they can be built without buildkit ([4b55b1f](https://github.com/Scan-Documents/node-sdk/commit/4b55b1fae74f0ea3106258ccf85863a9172582c2))
+* **internal:** make MCP code execution location configurable via a flag ([1133800](https://github.com/Scan-Documents/node-sdk/commit/1133800e1e21c15a3beb23b14dc3e917b6248146))
+* **internal:** move stringifyQuery implementation to internal function ([3c528b4](https://github.com/Scan-Documents/node-sdk/commit/3c528b41d05fc52d1259d88192f6a9db5ed9717c))
+* **internal:** upgrade @modelcontextprotocol/sdk and hono ([cfd3f73](https://github.com/Scan-Documents/node-sdk/commit/cfd3f730692dcebcab5597407ef7927e057c39da))
+
 ## 0.1.0-alpha.27 (2026-02-24)
 
 Full Changelog: [v0.1.0-alpha.26...v0.1.0-alpha.27](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.26...v0.1.0-alpha.27)
