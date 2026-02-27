@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.29 (2026-02-27)
+
+Full Changelog: [v0.1.0-alpha.28...v0.1.0-alpha.29](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.28...v0.1.0-alpha.29)
+
+### Bug Fixes
+
+* **mcp:** update prompt ([7321f91](https://github.com/Scan-Documents/node-sdk/commit/7321f91402857abb5b9beb3a43da0393cbb345fe))
+
 ## 0.1.0-alpha.28 (2026-02-27)
 
 Full Changelog: [v0.1.0-alpha.27...v0.1.0-alpha.28](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.27...v0.1.0-alpha.28)
