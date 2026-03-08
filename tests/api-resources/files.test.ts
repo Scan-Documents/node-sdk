@@ -55,7 +55,7 @@ describe('resource files', () => {
   // Mock server tests are disabled
   test.skip('upload: only required params', async () => {
     const responsePromise = client.files.upload({
-      file: await toFile(Buffer.from('# my file contents'), 'README.md'),
+      file: await toFile(Buffer.from('Example data'), 'README.md'),
       name: 'File Name',
     });
     const rawResponse = await responsePromise.asResponse();
@@ -70,7 +70,7 @@ describe('resource files', () => {
   // Mock server tests are disabled
   test.skip('upload: required and optional params', async () => {
     const response = await client.files.upload({
-      file: await toFile(Buffer.from('# my file contents'), 'README.md'),
+      file: await toFile(Buffer.from('Example data'), 'README.md'),
       name: 'File Name',
     });
   });
