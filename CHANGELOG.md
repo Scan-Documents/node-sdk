@@ -1,5 +1,23 @@
 # Changelog
 
+## 0.1.0-alpha.30 (2026-03-08)
+
+Full Changelog: [v0.1.0-alpha.29...v0.1.0-alpha.30](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.29...v0.1.0-alpha.30)
+
+### Bug Fixes
+
+* **client:** preserve URL params already embedded in path ([6cbd733](https://github.com/Scan-Documents/node-sdk/commit/6cbd7337b0f0f2e187fc8123c7eef86704327372))
+
+
+### Chores
+
+* **ci:** skip uploading artifacts on stainless-internal branches ([2aff58a](https://github.com/Scan-Documents/node-sdk/commit/2aff58a69e6caba41e7b9171781a53254f570fc5))
+* **internal:** codegen related update ([df64e3c](https://github.com/Scan-Documents/node-sdk/commit/df64e3c1d77cba0a7a3e43d154bd4ba0db69edc0))
+* **internal:** codegen related update ([5982213](https://github.com/Scan-Documents/node-sdk/commit/59822139383e80e2b5351c014ab9ced47cce5b6e))
+* **internal:** use x-stainless-mcp-client-envs header for MCP remote code tool calls ([807bfb7](https://github.com/Scan-Documents/node-sdk/commit/807bfb793c7ff25838c7b585b93494dcf2050b5a))
+* **mcp-server:** return access instructions for 404 without API key ([368d6f4](https://github.com/Scan-Documents/node-sdk/commit/368d6f4e8ace2d9bda932ae9307b827ef7741236))
+* update placeholder string ([28577d0](https://github.com/Scan-Documents/node-sdk/commit/28577d087ff00807ee92cb7a9ac36fc670b0f52e))
+
 ## 0.1.0-alpha.29 (2026-02-27)
 
 Full Changelog: [v0.1.0-alpha.28...v0.1.0-alpha.29](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.28...v0.1.0-alpha.29)
