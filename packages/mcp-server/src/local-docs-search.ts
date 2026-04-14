@@ -76,7 +76,7 @@ const EMBEDDED_METHODS: MethodEntry[] = [
       typescript: {
         method: 'client.files.upload',
         example:
-          "import ScanDocuments from 'scan-documents';\n\nconst client = new ScanDocuments({\n  apiKey: process.env['SCAN_DOCUMENTS_API_KEY'], // This is the default and can be omitted\n});\n\nconst file = await client.files.upload({\n  file: fs.createReadStream('path/to/file'),\n  name: 'File Name',\n});\n\nconsole.log(file);",
+          "import fs from 'fs';\nimport ScanDocuments from 'scan-documents';\n\nconst client = new ScanDocuments({\n  apiKey: process.env['SCAN_DOCUMENTS_API_KEY'], // This is the default and can be omitted\n});\n\nconst file = await client.files.upload({\n  file: fs.createReadStream('path/to/file'),\n  name: 'File Name',\n});\n\nconsole.log(file);",
       },
     },
   },
