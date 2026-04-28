@@ -1,5 +1,47 @@
 # Changelog
 
+## 0.1.0-alpha.31 (2026-04-28)
+
+Full Changelog: [v0.1.0-alpha.30...v0.1.0-alpha.31](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.30...v0.1.0-alpha.31)
+
+### Features
+
+* support setting headers via env ([d941a99](https://github.com/Scan-Documents/node-sdk/commit/d941a99150e411dfa05c035173fe42d3d1ff63bf))
+
+
+### Chores
+
+* **ci:** escape input path in publish-npm workflow ([167333c](https://github.com/Scan-Documents/node-sdk/commit/167333c43ac5a5830123674698abf8ffaaa1ffec))
+* **ci:** skip lint on metadata-only changes ([f23d9e1](https://github.com/Scan-Documents/node-sdk/commit/f23d9e14ec9747bcdf9f0cea345261d7e00497fa))
+* fix example snippet imports ([d4a4864](https://github.com/Scan-Documents/node-sdk/commit/d4a4864e2f3fc5e2c17a064f8cc3c49ffad28796))
+* **internal:** bump @modelcontextprotocol/sdk, @hono/node-server, and minimatch ([d5b63e3](https://github.com/Scan-Documents/node-sdk/commit/d5b63e36a5c6bc96d2c485834a09050b7ce61555))
+* **internal:** codegen related update ([d6ddaad](https://github.com/Scan-Documents/node-sdk/commit/d6ddaad6fbbbe0762818c190b0397977432f735f))
+* **internal:** codegen related update ([0e054b1](https://github.com/Scan-Documents/node-sdk/commit/0e054b1a7f02a2e0397a031f452c0e61619f920d))
+* **internal:** codegen related update ([f250d5c](https://github.com/Scan-Documents/node-sdk/commit/f250d5c9e298ad24ac68c2d1553fb11154d6a14b))
+* **internal:** codegen related update ([8dea8bd](https://github.com/Scan-Documents/node-sdk/commit/8dea8bdf7abb0beec86cb0a69ba5e73d2dd69f90))
+* **internal:** fix MCP docker image builds in yarn projects ([e75ca0f](https://github.com/Scan-Documents/node-sdk/commit/e75ca0f0a93090aba75408315df8810dbf24011e))
+* **internal:** fix MCP server import ordering ([c543531](https://github.com/Scan-Documents/node-sdk/commit/c5435317be17d49ff8e31c2a5a0a99e0dd3ed38d))
+* **internal:** fix MCP server TS errors that occur with required client options ([2991a6d](https://github.com/Scan-Documents/node-sdk/commit/2991a6d8dd1d26b6b1d9275b066b0ebc007eec9d))
+* **internal:** improve local docs search for MCP servers ([a95ae63](https://github.com/Scan-Documents/node-sdk/commit/a95ae63b3cd1ba1ad32aa5ec2e5e4e8d05dfceb8))
+* **internal:** improve local docs search for MCP servers ([5f6d8a5](https://github.com/Scan-Documents/node-sdk/commit/5f6d8a56a878ff32020b149eeb60561b951883fd))
+* **internal:** make generated MCP servers compatible with Cloudflare worker environments ([663e939](https://github.com/Scan-Documents/node-sdk/commit/663e9399aea38becc113376f195b81c46d268b08))
+* **internal:** more robust bootstrap script ([fcfc97f](https://github.com/Scan-Documents/node-sdk/commit/fcfc97ff06bac502fdbb9798f4fa0f0f5a9804fa))
+* **internal:** show error causes in MCP servers when running in local mode ([6c47ad3](https://github.com/Scan-Documents/node-sdk/commit/6c47ad3d25b62771d3a17791848a2ab24a5524ee))
+* **internal:** support custom-instructions-path flag in MCP servers ([bc36a75](https://github.com/Scan-Documents/node-sdk/commit/bc36a753ea900b7efaad9e149ed6756e3a07f235))
+* **internal:** support local docs search in MCP servers ([ccc0fcd](https://github.com/Scan-Documents/node-sdk/commit/ccc0fcdc0152a171b5a2c9363c67a5f2ad8b4831))
+* **internal:** support type annotations when running MCP in local execution mode ([a27a525](https://github.com/Scan-Documents/node-sdk/commit/a27a525e725479e6ff38a393f3e405fce31fa451))
+* **internal:** support x-stainless-mcp-client-envs header in MCP servers ([c5d6196](https://github.com/Scan-Documents/node-sdk/commit/c5d619641e44fd5f14e43aa230d05697342433bd))
+* **internal:** support x-stainless-mcp-client-permissions headers in MCP servers ([8d8479b](https://github.com/Scan-Documents/node-sdk/commit/8d8479b6ba016c97e8ddbb9f25e0947fffdb79de))
+* **internal:** tweak CI branches ([73c3ed7](https://github.com/Scan-Documents/node-sdk/commit/73c3ed73bf25819de55cdbd8c0e327802ac596f4))
+* **internal:** update dependencies to address dependabot vulnerabilities ([03a21da](https://github.com/Scan-Documents/node-sdk/commit/03a21da5bf6c12e562a3f27580e244eb01d4d250))
+* **internal:** update gitignore ([1b26e0a](https://github.com/Scan-Documents/node-sdk/commit/1b26e0a9c4b98ff889d9610698c06485adb98493))
+* **internal:** use link instead of file in MCP server package.json files ([81b19bd](https://github.com/Scan-Documents/node-sdk/commit/81b19bdeadc0e44974e10599d8b46bd0c51e5936))
+* **mcp-server:** add support for session id, forward client info ([5af2171](https://github.com/Scan-Documents/node-sdk/commit/5af21714af1ec3d576ceb9f30be44fbd53b8f684))
+* **mcp-server:** improve instructions ([042e4c4](https://github.com/Scan-Documents/node-sdk/commit/042e4c4326c5ad56033fea22d82c1b85a2aefe5e))
+* **mcp-server:** increase local docs search result count from 5 to 10 ([3600369](https://github.com/Scan-Documents/node-sdk/commit/360036949f26eebde78e1a54d4759ee8fea2f19c))
+* **mcp-server:** log client info ([62374e9](https://github.com/Scan-Documents/node-sdk/commit/62374e95d97926e21f8953de479fead714431e0d))
+* restructure docs search code ([d176016](https://github.com/Scan-Documents/node-sdk/commit/d176016c3b293d7534c0234e2a35245208793f22))
+
 ## 0.1.0-alpha.30 (2026-03-08)
 
 Full Changelog: [v0.1.0-alpha.29...v0.1.0-alpha.30](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.29...v0.1.0-alpha.30)
