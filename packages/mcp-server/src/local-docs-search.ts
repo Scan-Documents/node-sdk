@@ -377,7 +377,7 @@ const EMBEDDED_METHODS: MethodEntry[] = [
       },
       http: {
         example:
-          'curl https://api.scan-documents.com/v1/image-operations/detect-documents \\\n    -H \'Content-Type: application/json\' \\\n    -H "x-api-key: $SCAN_DOCUMENTS_API_KEY" \\\n    -d \'{\n          "input": "file_avyrvozb9302uwhq"\n        }\'',
+          'curl https://api.scan-documents.com/v1/image-operations/detect-documents \\\n    -H \'Content-Type: application/json\' \\\n    -H "x-api-key: $SCAN_DOCUMENTS_API_KEY" \\\n    -d \'{\n          "input": "file_avyrvozb9302uwhq",\n          "callback_url": "https://example.com/callback"\n        }\'',
       },
     },
   },
@@ -408,7 +408,7 @@ const EMBEDDED_METHODS: MethodEntry[] = [
       },
       http: {
         example:
-          'curl https://api.scan-documents.com/v1/image-operations/warp \\\n    -H \'Content-Type: application/json\' \\\n    -H "x-api-key: $SCAN_DOCUMENTS_API_KEY" \\\n    -d \'{\n          "input": "file_avyrvozb9302uwhq",\n          "vertices": [\n            {\n              "x": 0,\n              "y": 0\n            },\n            {\n              "x": 100,\n              "y": 10\n            },\n            {\n              "x": 100,\n              "y": 100\n            },\n            {\n              "x": 0,\n              "y": 90\n            }\n          ],\n          "name": "Example Image"\n        }\'',
+          'curl https://api.scan-documents.com/v1/image-operations/warp \\\n    -H \'Content-Type: application/json\' \\\n    -H "x-api-key: $SCAN_DOCUMENTS_API_KEY" \\\n    -d \'{\n          "input": "file_avyrvozb9302uwhq",\n          "vertices": [\n            {\n              "x": 0,\n              "y": 0\n            },\n            {\n              "x": 100,\n              "y": 10\n            },\n            {\n              "x": 100,\n              "y": 100\n            },\n            {\n              "x": 0,\n              "y": 90\n            }\n          ],\n          "callback_url": "https://example.com/callback",\n          "name": "Example Image"\n        }\'',
       },
     },
   },
@@ -443,7 +443,7 @@ const EMBEDDED_METHODS: MethodEntry[] = [
       },
       http: {
         example:
-          'curl https://api.scan-documents.com/v1/image-operations/apply-effect \\\n    -H \'Content-Type: application/json\' \\\n    -H "x-api-key: $SCAN_DOCUMENTS_API_KEY" \\\n    -d \'{\n          "effect": "grayscale",\n          "input": "file_avyrvozb9302uwhq",\n          "name": "Example Image"\n        }\'',
+          'curl https://api.scan-documents.com/v1/image-operations/apply-effect \\\n    -H \'Content-Type: application/json\' \\\n    -H "x-api-key: $SCAN_DOCUMENTS_API_KEY" \\\n    -d \'{\n          "effect": "grayscale",\n          "input": "file_avyrvozb9302uwhq",\n          "callback_url": "https://example.com/callback",\n          "name": "Example Image"\n        }\'',
       },
     },
   },
@@ -480,7 +480,7 @@ const EMBEDDED_METHODS: MethodEntry[] = [
       },
       http: {
         example:
-          'curl https://api.scan-documents.com/v1/image-operations/scan \\\n    -H \'Content-Type: application/json\' \\\n    -H "x-api-key: $SCAN_DOCUMENTS_API_KEY" \\\n    -d \'{\n          "effect": "none",\n          "input": "file_avyrvozb9302uwhq",\n          "scan_mode": "standard",\n          "name": "Example Image"\n        }\'',
+          'curl https://api.scan-documents.com/v1/image-operations/scan \\\n    -H \'Content-Type: application/json\' \\\n    -H "x-api-key: $SCAN_DOCUMENTS_API_KEY" \\\n    -d \'{\n          "effect": "none",\n          "input": "file_avyrvozb9302uwhq",\n          "scan_mode": "standard",\n          "callback_url": "https://example.com/callback",\n          "name": "Example Image"\n        }\'',
       },
     },
   },
@@ -516,7 +516,7 @@ const EMBEDDED_METHODS: MethodEntry[] = [
       },
       http: {
         example:
-          'curl https://api.scan-documents.com/v1/pdf-operations/render \\\n    -H \'Content-Type: application/json\' \\\n    -H "x-api-key: $SCAN_DOCUMENTS_API_KEY" \\\n    -d \'{\n          "input": "file_avyrvozb9302uwhq",\n          "dpi": 300,\n          "name": "File Name",\n          "pages": "2-7"\n        }\'',
+          'curl https://api.scan-documents.com/v1/pdf-operations/render \\\n    -H \'Content-Type: application/json\' \\\n    -H "x-api-key: $SCAN_DOCUMENTS_API_KEY" \\\n    -d \'{\n          "input": "file_avyrvozb9302uwhq",\n          "callback_url": "https://example.com/callback",\n          "dpi": 300,\n          "name": "File Name",\n          "pages": "2-7"\n        }\'',
       },
     },
   },
@@ -546,7 +546,7 @@ const EMBEDDED_METHODS: MethodEntry[] = [
       },
       http: {
         example:
-          'curl https://api.scan-documents.com/v1/pdf-operations/split \\\n    -H \'Content-Type: application/json\' \\\n    -H "x-api-key: $SCAN_DOCUMENTS_API_KEY" \\\n    -d \'{\n          "input": "file_avyrvozb9302uwhq",\n          "name": "File Name"\n        }\'',
+          'curl https://api.scan-documents.com/v1/pdf-operations/split \\\n    -H \'Content-Type: application/json\' \\\n    -H "x-api-key: $SCAN_DOCUMENTS_API_KEY" \\\n    -d \'{\n          "input": "file_avyrvozb9302uwhq",\n          "callback_url": "https://example.com/callback",\n          "name": "File Name"\n        }\'',
       },
     },
   },
@@ -576,7 +576,7 @@ const EMBEDDED_METHODS: MethodEntry[] = [
       },
       http: {
         example:
-          'curl https://api.scan-documents.com/v1/pdf-operations/merge \\\n    -H \'Content-Type: application/json\' \\\n    -H "x-api-key: $SCAN_DOCUMENTS_API_KEY" \\\n    -d \'{\n          "input": [\n            "file_avyrvozb9302uwhq"\n          ],\n          "name": "File Name"\n        }\'',
+          'curl https://api.scan-documents.com/v1/pdf-operations/merge \\\n    -H \'Content-Type: application/json\' \\\n    -H "x-api-key: $SCAN_DOCUMENTS_API_KEY" \\\n    -d \'{\n          "input": [\n            "file_avyrvozb9302uwhq"\n          ],\n          "callback_url": "https://example.com/callback",\n          "name": "File Name"\n        }\'',
       },
     },
   },
@@ -606,7 +606,7 @@ const EMBEDDED_METHODS: MethodEntry[] = [
       },
       http: {
         example:
-          'curl https://api.scan-documents.com/v1/pdf-operations/extract-pages \\\n    -H \'Content-Type: application/json\' \\\n    -H "x-api-key: $SCAN_DOCUMENTS_API_KEY" \\\n    -d \'{\n          "input": "file_avyrvozb9302uwhq",\n          "pages": "2-7",\n          "name": "File Name"\n        }\'',
+          'curl https://api.scan-documents.com/v1/pdf-operations/extract-pages \\\n    -H \'Content-Type: application/json\' \\\n    -H "x-api-key: $SCAN_DOCUMENTS_API_KEY" \\\n    -d \'{\n          "input": "file_avyrvozb9302uwhq",\n          "pages": "2-7",\n          "callback_url": "https://example.com/callback",\n          "name": "File Name"\n        }\'',
       },
     },
   },
