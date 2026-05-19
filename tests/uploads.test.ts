@@ -1,7 +1,6 @@
 import fs from 'fs';
 import type { ResponseLike } from 'scan-documents/internal/to-file';
 import { toFile } from 'scan-documents/core/uploads';
-import { File } from 'node:buffer';
 
 class MyClass {
   name: string = 'foo';
