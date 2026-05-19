@@ -1,6 +1,6 @@
 {
   "name": "scan-documents",
-  "version": "0.1.0-alpha.31",
+  "version": "0.1.0-alpha.32",
   "description": "The official TypeScript library for the Scan Documents API",
   "author": "Scan Documents <support@scan-documents.com>",
   "types": "dist/index.d.ts",
