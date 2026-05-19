@@ -1,5 +1,26 @@
 # Changelog
 
+## 0.1.0-alpha.32 (2026-05-19)
+
+Full Changelog: [v0.1.0-alpha.31...v0.1.0-alpha.32](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.31...v0.1.0-alpha.32)
+
+### Bug Fixes
+
+* **typescript:** upgrade tsc-multi so that it works with Node 26 ([5033e84](https://github.com/Scan-Documents/node-sdk/commit/5033e84d00cb70a83950e35f9dddde7cca073479))
+
+
+### Chores
+
+* avoid formatting file that gets changed during releases ([ac1237d](https://github.com/Scan-Documents/node-sdk/commit/ac1237dd3fe8aba1b37187ec5b72bccbbe024513))
+* **format:** run eslint and prettier separately ([9640cea](https://github.com/Scan-Documents/node-sdk/commit/9640cea81ed35dfbbfa210c5f66d4ee3088c4e12))
+* redact api-key headers in debug logs ([8770cf0](https://github.com/Scan-Documents/node-sdk/commit/8770cf047221c69bb81cbdebb0b8869513e513ac))
+* **tests:** remove redundant File import ([01b4d39](https://github.com/Scan-Documents/node-sdk/commit/01b4d39c3498d244001ec92d808bc64cc1789daf))
+
+
+### Documentation
+
+* update http mcp docs ([2328cbd](https://github.com/Scan-Documents/node-sdk/commit/2328cbdcff9e547dd615bbc2975ed6e314882dd7))
+
 ## 0.1.0-alpha.31 (2026-04-28)
 
 Full Changelog: [v0.1.0-alpha.30...v0.1.0-alpha.31](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.30...v0.1.0-alpha.31)
