@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-alpha.33 (2026-05-29)
+
+Full Changelog: [v0.1.0-alpha.32...v0.1.0-alpha.33](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.32...v0.1.0-alpha.33)
+
+### Bug Fixes
+
+* **mcp:** use `pure-lockfile` when building mcp server ([45b199e](https://github.com/Scan-Documents/node-sdk/commit/45b199e99ad4b283cff3588fc480bcf62ef661c0))
+
+
+### Chores
+
+* **internal:** codegen related update ([73429b2](https://github.com/Scan-Documents/node-sdk/commit/73429b2ddeecca1973c17478286db869027e68f3))
+
 ## 0.1.0-alpha.32 (2026-05-19)
 
 Full Changelog: [v0.1.0-alpha.31...v0.1.0-alpha.32](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.31...v0.1.0-alpha.32)
