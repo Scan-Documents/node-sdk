@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.34 (2026-06-17)
+
+Full Changelog: [v0.1.0-alpha.33...v0.1.0-alpha.34](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.33...v0.1.0-alpha.34)
+
+### Bug Fixes
+
+* **client:** send content-type header for requests with an omitted optional body ([c2c296c](https://github.com/Scan-Documents/node-sdk/commit/c2c296cab70b838067a8e6cdfdbc6cdd2f241a14))
+
 ## 0.1.0-alpha.33 (2026-05-29)
 
 Full Changelog: [v0.1.0-alpha.32...v0.1.0-alpha.33](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.32...v0.1.0-alpha.33)
