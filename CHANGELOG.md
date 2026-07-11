@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-alpha.35 (2026-07-11)
+
+Full Changelog: [v0.1.0-alpha.34...v0.1.0-alpha.35](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.34...v0.1.0-alpha.35)
+
+### Bug Fixes
+
+* **ci:** bump @arethetypeswrong/cli to ^0.18.0 and run CI workflows on Node 24 ([428770d](https://github.com/Scan-Documents/node-sdk/commit/428770d3e2f90b290cfb6788a5686e15f28366cb))
+
+
+### Chores
+
+* **internal:** codegen related update ([f149ae7](https://github.com/Scan-Documents/node-sdk/commit/f149ae750a8259690b90c6a38613ee789ac8d4ec))
+
 ## 0.1.0-alpha.34 (2026-06-17)
 
 Full Changelog: [v0.1.0-alpha.33...v0.1.0-alpha.34](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.33...v0.1.0-alpha.34)
