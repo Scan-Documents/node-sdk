@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.36 (2026-07-18)
+
+Full Changelog: [v0.1.0-alpha.35...v0.1.0-alpha.36](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.35...v0.1.0-alpha.36)
+
+### Features
+
+* **stlc:** configurable CI runner and private-production-repo support in workflow templates ([cee5073](https://github.com/Scan-Documents/node-sdk/commit/cee507327ef2a4222c480339aef802b1da52c9a0))
+
 ## 0.1.0-alpha.35 (2026-07-11)
 
 Full Changelog: [v0.1.0-alpha.34...v0.1.0-alpha.35](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.34...v0.1.0-alpha.35)
