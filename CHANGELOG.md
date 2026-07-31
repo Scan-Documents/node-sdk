@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-alpha.37 (2026-07-31)
+
+Full Changelog: [v0.1.0-alpha.36...v0.1.0-alpha.37](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.36...v0.1.0-alpha.37)
+
+### Bug Fixes
+
+* **stlc:** stop hand-edited CI workflows from blocking seals and builds ([f289446](https://github.com/Scan-Documents/node-sdk/commit/f289446d5e68a6814a8ec2eeee0468c0120ffdca))
+
+
+### Chores
+
+* **internal:** codegen related update ([c09e20d](https://github.com/Scan-Documents/node-sdk/commit/c09e20d8f5770e47e34082b90a6d1651565a0e90))
+
 ## 0.1.0-alpha.36 (2026-07-18)
 
 Full Changelog: [v0.1.0-alpha.35...v0.1.0-alpha.36](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.35...v0.1.0-alpha.36)
