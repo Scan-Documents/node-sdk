@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.38 (2026-09-01)
+
+Full Changelog: [v0.1.0-alpha.37...v0.1.0-alpha.38](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.37...v0.1.0-alpha.38)
+
+### Documentation
+
+* **mcp:** document code execution modes and the local code runner ([550f28c](https://github.com/Scan-Documents/node-sdk/commit/550f28c6b1690fef2785703ea78ec777f7616599))
+
 ## 0.1.0-alpha.37 (2026-07-31)
 
 Full Changelog: [v0.1.0-alpha.36...v0.1.0-alpha.37](https://github.com/Scan-Documents/node-sdk/compare/v0.1.0-alpha.36...v0.1.0-alpha.37)

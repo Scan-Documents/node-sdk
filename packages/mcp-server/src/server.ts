@@ -28,7 +28,7 @@ export const newMcpServer = async ({
   new McpServer(
     {
       name: 'scan_documents_api',
-      version: '0.1.0-alpha.37',
+      version: '0.1.0-alpha.38',
     },
     {
       instructions: await getInstructions({ stainlessApiKey, customInstructionsPath }),
